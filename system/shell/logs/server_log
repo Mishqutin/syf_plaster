@@ -1,0 +1,469 @@
+
+2019 March 16, 02:02:47 > Server start
+====================Server start====================
+
+2019 March 16, 02:02:53 > Connection from: ('127.0.0.1', 51870).
+2019 March 16, 02:02:53 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 16, 02:02:53 > [OK] Data validated.
+
+2019 March 16, 02:03:02 > Connection from: ('127.0.0.1', 51871).
+2019 March 16, 02:03:02 > Received data: {'key': '123456', 'name': 'anon', 'string': 'echo dupsko mi kurwa śmierdzi'}.
+2019 March 16, 02:03:02 > [OK] Data validated.
+
+2019 March 16, 02:16:12 > Server start
+====================Server start====================
+
+2019 March 16, 02:16:19 > Connection from: ('127.0.0.1', 51883).
+2019 March 16, 02:16:19 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 16, 02:16:19 > [OK] Data validated.
+
+2019 March 16, 02:16:20 > Connection from: ('127.0.0.1', 51884).
+2019 March 16, 02:16:20 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 02:16:20 > [OK] Data validated.
+
+2019 March 16, 02:16:30 > Connection from: ('127.0.0.1', 51885).
+2019 March 16, 02:16:30 > Received data: {'key': '123456', 'name': 'anon', 'string': 'pwd'}.
+2019 March 16, 02:16:30 > [OK] Data validated.
+
+2019 March 16, 02:16:47 > Connection from: ('127.0.0.1', 51886).
+2019 March 16, 02:16:47 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd home'}.
+2019 March 16, 02:16:47 > [OK] Data validated.
+
+2019 March 16, 02:16:49 > Connection from: ('127.0.0.1', 51887).
+2019 March 16, 02:16:49 > Received data: {'key': '123456', 'name': 'anon', 'string': 'pwd'}.
+2019 March 16, 02:16:49 > [OK] Data validated.
+
+2019 March 16, 02:16:52 > Connection from: ('127.0.0.1', 51888).
+2019 March 16, 02:16:52 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 02:16:52 > [OK] Data validated.
+
+2019 March 16, 02:16:59 > Connection from: ('127.0.0.1', 51889).
+2019 March 16, 02:16:59 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd'}.
+2019 March 16, 02:16:59 > [OK] Data validated.
+
+2019 March 16, 02:17:02 > Connection from: ('127.0.0.1', 51890).
+2019 March 16, 02:17:02 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd djeuajdb'}.
+2019 March 16, 02:17:02 > [OK] Data validated.
+
+2019 March 16, 02:18:21 > Connection from: ('127.0.0.1', 51891).
+2019 March 16, 02:18:21 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls ./..'}.
+2019 March 16, 02:18:21 > [OK] Data validated.
+
+2019 March 16, 02:18:23 > Connection from: ('127.0.0.1', 51892).
+2019 March 16, 02:18:23 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 02:18:23 > [OK] Data validated.
+
+2019 March 16, 02:18:25 > Connection from: ('127.0.0.1', 51893).
+2019 March 16, 02:18:25 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls .'}.
+2019 March 16, 02:18:25 > [OK] Data validated.
+
+2019 March 16, 02:18:29 > Connection from: ('127.0.0.1', 51894).
+2019 March 16, 02:18:29 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd ./..'}.
+2019 March 16, 02:18:29 > [OK] Data validated.
+
+2019 March 16, 02:18:31 > Connection from: ('127.0.0.1', 51895).
+2019 March 16, 02:18:31 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 02:18:31 > [OK] Data validated.
+
+2019 March 16, 02:18:41 > Connection from: ('127.0.0.1', 51896).
+2019 March 16, 02:18:41 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd home'}.
+2019 March 16, 02:18:41 > [OK] Data validated.
+
+2019 March 16, 02:18:44 > Connection from: ('127.0.0.1', 51897).
+2019 March 16, 02:18:44 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd ...'}.
+2019 March 16, 02:18:44 > [OK] Data validated.
+
+2019 March 16, 02:18:47 > Connection from: ('127.0.0.1', 51898).
+2019 March 16, 02:18:47 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd .'}.
+2019 March 16, 02:18:47 > [OK] Data validated.
+
+2019 March 16, 12:36:05 > Server start
+====================Server start====================
+
+2019 March 16, 12:36:09 > Connection from: ('127.0.0.1', 52179).
+2019 March 16, 12:36:09 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 16, 12:36:09 > [OK] Data validated.
+
+2019 March 16, 12:36:13 > Connection from: ('127.0.0.1', 52180).
+2019 March 16, 12:36:13 > Received data: {'key': '123456', 'name': 'anon', 'string': 'localname'}.
+2019 March 16, 12:36:13 > [OK] Data validated.
+
+2019 March 16, 12:44:54 > Server start
+====================Server start====================
+
+2019 March 16, 12:44:57 > Connection from: ('127.0.0.1', 52208).
+2019 March 16, 12:44:57 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 12:44:57 > [OK] Data validated.
+
+2019 March 16, 12:44:59 > Connection from: ('127.0.0.1', 52209).
+2019 March 16, 12:44:59 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd ..'}.
+2019 March 16, 12:44:59 > [OK] Data validated.
+
+2019 March 16, 12:45:00 > Connection from: ('127.0.0.1', 52210).
+2019 March 16, 12:45:00 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 12:45:00 > [OK] Data validated.
+
+2019 March 16, 12:45:05 > Connection from: ('127.0.0.1', 52211).
+2019 March 16, 12:45:05 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd system'}.
+2019 March 16, 12:45:05 > [OK] Data validated.
+
+2019 March 16, 12:45:06 > Connection from: ('127.0.0.1', 52212).
+2019 March 16, 12:45:06 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 12:45:06 > [OK] Data validated.
+
+2019 March 16, 12:45:12 > Connection from: ('127.0.0.1', 52213).
+2019 March 16, 12:45:12 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd shell'}.
+2019 March 16, 12:45:12 > [OK] Data validated.
+
+2019 March 16, 12:45:15 > Connection from: ('127.0.0.1', 52214).
+2019 March 16, 12:45:15 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd libs'}.
+2019 March 16, 12:45:15 > [OK] Data validated.
+
+2019 March 16, 12:45:15 > Connection from: ('127.0.0.1', 52215).
+2019 March 16, 12:45:15 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 12:45:15 > [OK] Data validated.
+
+2019 March 16, 12:45:17 > Connection from: ('127.0.0.1', 52216).
+2019 March 16, 12:45:17 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cat'}.
+2019 March 16, 12:45:17 > [OK] Data validated.
+
+2019 March 16, 12:45:19 > Connection from: ('127.0.0.1', 52217).
+2019 March 16, 12:45:19 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cat jjdux'}.
+2019 March 16, 12:45:19 > [OK] Data validated.
+
+2019 March 16, 12:47:00 > Server start
+====================Server start====================
+
+2019 March 16, 12:47:03 > Connection from: ('127.0.0.1', 52218).
+2019 March 16, 12:47:03 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cat jxhxhx'}.
+2019 March 16, 12:47:03 > [OK] Data validated.
+
+2019 March 16, 12:47:05 > Connection from: ('127.0.0.1', 52219).
+2019 March 16, 12:47:05 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cat'}.
+2019 March 16, 12:47:05 > [OK] Data validated.
+
+2019 March 16, 12:47:09 > Connection from: ('127.0.0.1', 52220).
+2019 March 16, 12:47:09 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cat xjxjxj fhcud'}.
+2019 March 16, 12:47:09 > [OK] Data validated.
+
+2019 March 16, 12:47:14 > Connection from: ('127.0.0.1', 52221).
+2019 March 16, 12:47:14 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 12:47:14 > [OK] Data validated.
+
+2019 March 16, 12:47:21 > Connection from: ('127.0.0.1', 52222).
+2019 March 16, 12:47:21 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd ../system'}.
+2019 March 16, 12:47:21 > [OK] Data validated.
+
+2019 March 16, 12:47:28 > Connection from: ('127.0.0.1', 52223).
+2019 March 16, 12:47:28 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd shell/libs'}.
+2019 March 16, 12:47:28 > [OK] Data validated.
+
+2019 March 16, 12:47:28 > Connection from: ('127.0.0.1', 52224).
+2019 March 16, 12:47:28 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 12:47:28 > [OK] Data validated.
+
+2019 March 16, 12:47:40 > Connection from: ('127.0.0.1', 52225).
+2019 March 16, 12:47:40 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cat os_shell.py'}.
+2019 March 16, 12:47:40 > [OK] Data validated.
+
+2019 March 16, 12:47:58 > Connection from: ('127.0.0.1', 52226).
+2019 March 16, 12:47:58 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cat cmdproc.py'}.
+2019 March 16, 12:47:58 > [OK] Data validated.
+
+2019 March 16, 12:48:02 > Connection from: ('127.0.0.1', 52227).
+2019 March 16, 12:48:02 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd ..'}.
+2019 March 16, 12:48:02 > [OK] Data validated.
+
+2019 March 16, 12:48:07 > Connection from: ('127.0.0.1', 52228).
+2019 March 16, 12:48:07 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cat shell.py'}.
+2019 March 16, 12:48:07 > [OK] Data validated.
+
+2019 March 16, 12:55:49 > Server start
+====================Server start====================
+
+2019 March 16, 12:55:54 > Connection from: ('127.0.0.1', 52233).
+2019 March 16, 12:55:54 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 12:55:54 > [OK] Data validated.
+
+2019 March 16, 12:55:57 > Connection from: ('127.0.0.1', 52234).
+2019 March 16, 12:55:57 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd ..'}.
+2019 March 16, 12:55:57 > [OK] Data validated.
+
+2019 March 16, 12:56:03 > Connection from: ('127.0.0.1', 52235).
+2019 March 16, 12:56:03 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cs system/shell'}.
+2019 March 16, 12:56:03 > [OK] Data validated.
+
+2019 March 16, 12:56:09 > Connection from: ('127.0.0.1', 52236).
+2019 March 16, 12:56:10 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd system/shell'}.
+2019 March 16, 12:56:10 > [OK] Data validated.
+
+2019 March 16, 12:56:11 > Connection from: ('127.0.0.1', 52237).
+2019 March 16, 12:56:11 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 12:56:11 > [OK] Data validated.
+
+2019 March 16, 12:56:17 > Connection from: ('127.0.0.1', 52238).
+2019 March 16, 12:56:17 > Received data: {'key': '123456', 'name': 'anon', 'string': 'stat shell.py'}.
+2019 March 16, 12:56:17 > [OK] Data validated.
+
+2019 March 16, 12:57:44 > Server start
+====================Server start====================
+
+2019 March 16, 12:58:03 > Connection from: ('127.0.0.1', 52240).
+2019 March 16, 12:58:03 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd ../system/shell'}.
+2019 March 16, 12:58:03 > [OK] Data validated.
+
+2019 March 16, 12:58:09 > Connection from: ('127.0.0.1', 52241).
+2019 March 16, 12:58:09 > Received data: {'key': '123456', 'name': 'anon', 'string': 'stat shell.py'}.
+2019 March 16, 12:58:09 > [OK] Data validated.
+
+2019 March 16, 13:16:10 > Server start
+====================Server start====================
+
+2019 March 16, 13:16:14 > Connection from: ('127.0.0.1', 52250).
+2019 March 16, 13:16:14 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 13:16:14 > [OK] Data validated.
+
+2019 March 16, 13:16:16 > Connection from: ('127.0.0.1', 52251).
+2019 March 16, 13:16:16 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 16, 13:16:16 > [OK] Data validated.
+
+2019 March 16, 13:19:17 > Server start
+====================Server start====================
+
+2019 March 16, 13:19:22 > Connection from: ('127.0.0.1', 52252).
+2019 March 16, 13:19:22 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 16, 13:19:22 > [OK] Data validated.
+
+2019 March 16, 13:20:50 > Server start
+====================Server start====================
+
+2019 March 16, 13:20:53 > Connection from: ('127.0.0.1', 52253).
+2019 March 16, 13:20:53 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ziprun'}.
+2019 March 16, 13:20:53 > [OK] Data validated.
+
+2019 March 16, 13:20:57 > Connection from: ('127.0.0.1', 52254).
+2019 March 16, 13:20:57 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 16, 13:20:57 > [OK] Data validated.
+
+2019 March 16, 13:36:51 > Server start
+====================Server start====================
+
+2019 March 16, 13:36:54 > Connection from: ('127.0.0.1', 52255).
+2019 March 16, 13:36:54 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 16, 13:36:54 > [OK] Data validated.
+
+2019 March 16, 13:36:59 > Connection from: ('127.0.0.1', 52256).
+2019 March 16, 13:36:59 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd ../system'}.
+2019 March 16, 13:36:59 > [OK] Data validated.
+
+2019 March 16, 13:37:01 > Connection from: ('127.0.0.1', 52257).
+2019 March 16, 13:37:01 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cd shell'}.
+2019 March 16, 13:37:01 > [OK] Data validated.
+
+2019 March 16, 13:37:04 > Connection from: ('127.0.0.1', 52258).
+2019 March 16, 13:37:04 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ziprun'}.
+2019 March 16, 13:37:04 > [OK] Data validated.
+
+2019 March 16, 13:37:06 > Connection from: ('127.0.0.1', 52259).
+2019 March 16, 13:37:06 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 13:37:06 > [OK] Data validated.
+
+2019 March 16, 13:37:12 > Connection from: ('127.0.0.1', 52260).
+2019 March 16, 13:37:12 > Received data: {'key': '123456', 'name': 'anon', 'string': 'cat shell.bat'}.
+2019 March 16, 13:37:12 > [OK] Data validated.
+
+2019 March 16, 13:44:33 > Server start
+====================Server start====================
+
+2019 March 16, 13:44:39 > Connection from: ('127.0.0.1', 52261).
+2019 March 16, 13:44:39 > Received data: {'key': '123456', 'name': 'anon', 'string': 'reload'}.
+2019 March 16, 13:44:39 > [OK] Data validated.
+
+2019 March 16, 13:45:47 > Connection from: ('127.0.0.1', 52262).
+2019 March 16, 13:45:47 > Received data: {'key': '123456', 'name': 'anon', 'string': 'reload'}.
+2019 March 16, 13:45:47 > [OK] Data validated.
+
+2019 March 16, 13:45:49 > Connection from: ('127.0.0.1', 52263).
+2019 March 16, 13:45:49 > Received data: {'key': '123456', 'name': 'anon', 'string': 'reload'}.
+2019 March 16, 13:45:49 > [OK] Data validated.
+
+2019 March 16, 18:59:56 > Server start
+====================Server start====================
+
+2019 March 16, 19:00:21 > Connection from: ('127.0.0.1', 52632).
+2019 March 16, 19:00:21 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 16, 19:00:21 > [OK] Data validated.
+
+2019 March 16, 19:00:22 > Connection from: ('127.0.0.1', 52633).
+2019 March 16, 19:00:22 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 19:00:22 > [OK] Data validated.
+
+2019 March 16, 19:00:35 > Connection from: ('127.0.0.1', 52634).
+2019 March 16, 19:00:35 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ziprun ziptest.zip'}.
+2019 March 16, 19:00:35 > [OK] Data validated.
+
+2019 March 16, 19:00:57 > Connection from: ('127.0.0.1', 52635).
+2019 March 16, 19:00:57 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 16, 19:00:57 > [OK] Data validated.
+
+2019 March 16, 20:15:35 > Server start
+====================Server start====================
+
+2019 March 16, 20:19:14 > Server start
+====================Server start====================
+
+2019 March 16, 20:19:20 > Connection from: ('127.0.0.1', 52696).
+2019 March 16, 20:19:20 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 20:19:20 > [OK] Data validated.
+
+2019 March 16, 20:19:27 > Connection from: ('127.0.0.1', 52697).
+2019 March 16, 20:19:27 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ziprun ziptest.py'}.
+2019 March 16, 20:19:27 > [OK] Data validated.
+
+2019 March 16, 20:19:43 > Connection from: ('127.0.0.1', 52698).
+2019 March 16, 20:19:43 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ziprun ziptest.zip'}.
+2019 March 16, 20:19:43 > [OK] Data validated.
+
+2019 March 16, 20:28:52 > Server start
+====================Server start====================
+
+2019 March 16, 20:38:15 > Server start
+====================Server start====================
+
+2019 March 16, 20:38:17 > Connection from: ('127.0.0.1', 52803).
+2019 March 16, 20:38:17 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 20:38:17 > [OK] Data validated.
+
+2019 March 16, 20:38:26 > Connection from: ('127.0.0.1', 52804).
+2019 March 16, 20:38:26 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ziprun ziphzhsu'}.
+2019 March 16, 20:38:26 > [OK] Data validated.
+
+2019 March 16, 20:38:33 > Connection from: ('127.0.0.1', 52805).
+2019 March 16, 20:38:33 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 16, 20:38:33 > [OK] Data validated.
+
+2019 March 16, 20:38:46 > Connection from: ('127.0.0.1', 52806).
+2019 March 16, 20:38:46 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ziprun ziptest.zip'}.
+2019 March 16, 20:38:46 > [OK] Data validated.
+
+2019 March 16, 20:38:52 > Connection from: ('127.0.0.1', 52807).
+2019 March 16, 20:38:52 > Received data: {'key': '123456', 'name': 'anon', 'string': 'reload'}.
+2019 March 16, 20:38:52 > [OK] Data validated.
+
+2019 March 16, 20:38:55 > Connection from: ('127.0.0.1', 52808).
+2019 March 16, 20:38:55 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ziptest'}.
+2019 March 16, 20:38:55 > [OK] Data validated.
+
+2019 March 16, 21:14:35 > Server start
+====================Server start====================
+
+2019 March 16, 21:16:20 > Server start
+====================Server start====================
+
+2019 March 16, 21:16:44 > Server start
+====================Server start====================
+
+2019 March 16, 21:16:50 > Connection from: ('127.0.0.1', 52897).
+2019 March 16, 21:16:50 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 16, 21:16:50 > [OK] Data validated.
+
+2019 March 16, 21:23:52 > Server start
+====================Server start====================
+
+2019 March 16, 21:24:05 > Connection from: ('127.0.0.1', 52901).
+2019 March 16, 21:24:05 > Received data: {'key': '123456', 'name': 'anon', 'string': 'sleep 5 Done!'}.
+2019 March 16, 21:24:05 > [OK] Data validated.
+
+2019 March 16, 21:25:16 > Server start
+====================Server start====================
+
+2019 March 16, 21:25:30 > Connection from: ('127.0.0.1', 52902).
+2019 March 16, 21:25:30 > Received data: {'key': '123456', 'name': 'anon', 'string': 'sleep 5 done!'}.
+2019 March 16, 21:25:30 > [OK] Data validated.
+
+2019 March 16, 21:26:40 > Connection from: ('127.0.0.1', 52903).
+2019 March 16, 21:26:40 > Received data: {'key': '123456', 'name': 'anon', 'string': 'sleep 10 Yay!'}.
+2019 March 16, 21:26:40 > [OK] Data validated.
+
+2019 March 16, 21:26:43 > Connection from: ('127.0.0.1', 52904).
+2019 March 16, 21:26:43 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 16, 21:26:43 > [OK] Data validated.
+
+2019 March 16, 21:26:48 > Connection from: ('127.0.0.1', 52905).
+2019 March 16, 21:26:48 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 16, 21:26:48 > [OK] Data validated.
+
+2019 March 16, 21:32:52 > Server start
+====================Server start====================
+
+2019 March 16, 21:32:57 > Connection from: ('127.0.0.1', 52924).
+2019 March 16, 21:32:57 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 16, 21:32:57 > [OK] Data validated.
+
+2019 March 16, 21:35:21 > Server start
+====================Server start====================
+
+2019 March 16, 21:35:25 > Connection from: ('127.0.0.1', 52925).
+2019 March 16, 21:35:25 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 16, 21:35:25 > [OK] Data validated.
+
+2019 March 16, 21:35:32 > Connection from: ('127.0.0.1', 52927).
+2019 March 16, 21:35:32 > Received data: {'key': '123456', 'name': 'anon', 'string': 'sleep 10 Yaya!'}.
+2019 March 16, 21:35:32 > [OK] Data validated.
+
+2019 March 16, 21:35:36 > Connection from: ('127.0.0.1', 52928).
+2019 March 16, 21:35:36 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 16, 21:35:36 > [OK] Data validated.
+
+2019 March 16, 21:45:14 > Server start
+====================Server start====================
+
+2019 March 16, 21:45:17 > Connection from: ('127.0.0.1', 52933).
+2019 March 16, 21:45:17 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 21:45:17 > [OK] Data validated.
+
+2019 March 16, 21:45:29 > Connection from: ('127.0.0.1', 52934).
+2019 March 16, 21:45:29 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ziprun ziptest.zip'}.
+2019 March 16, 21:45:29 > [OK] Data validated.
+
+2019 March 16, 21:46:26 > Server start
+====================Server start====================
+
+2019 March 16, 21:46:30 > Connection from: ('127.0.0.1', 52935).
+2019 March 16, 21:46:30 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 21:46:30 > [OK] Data validated.
+
+2019 March 16, 21:46:37 > Connection from: ('127.0.0.1', 52936).
+2019 March 16, 21:46:37 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ziprun ziptest.zip'}.
+2019 March 16, 21:46:37 > [OK] Data validated.
+
+2019 March 16, 21:47:50 > Connection from: ('127.0.0.1', 52952).
+2019 March 16, 21:47:50 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ziprun ziptest.zip'}.
+2019 March 16, 21:47:50 > [OK] Data validated.
+
+2019 March 16, 21:47:50 > Connection from: ('127.0.0.1', 52953).
+2019 March 16, 21:47:50 > Received data: {'name': 'ziptest-app', 'key': '123456', 'string': 'reload'}.
+2019 March 16, 21:47:50 > [OK] Data validated.
+
+2019 March 16, 21:47:54 > Connection from: ('127.0.0.1', 52954).
+2019 March 16, 21:47:54 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ziptest'}.
+2019 March 16, 21:47:54 > [OK] Data validated.
+
+2019 March 16, 21:49:56 > Server start
+====================Server start====================
+
+2019 March 16, 21:49:59 > Connection from: ('127.0.0.1', 52967).
+2019 March 16, 21:49:59 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 16, 21:49:59 > [OK] Data validated.
+
+2019 March 16, 21:50:12 > Connection from: ('127.0.0.1', 52968).
+2019 March 16, 21:50:12 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ziprun ziptest.zip'}.
+2019 March 16, 21:50:12 > [OK] Data validated.
+
+2019 March 16, 21:50:12 > Connection from: ('127.0.0.1', 52969).
+2019 March 16, 21:50:12 > Received data: {'name': 'ziptest-app', 'key': '123456', 'string': 'reload'}.
+2019 March 16, 21:50:12 > [OK] Data validated.
+
+2019 March 16, 21:50:16 > Connection from: ('127.0.0.1', 52970).
+2019 March 16, 21:50:16 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ziptest'}.
+2019 March 16, 21:50:16 > [OK] Data validated.
