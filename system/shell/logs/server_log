@@ -467,3 +467,239 @@
 2019 March 16, 21:50:16 > Connection from: ('127.0.0.1', 52970).
 2019 March 16, 21:50:16 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ziptest'}.
 2019 March 16, 21:50:16 > [OK] Data validated.
+
+2019 March 16, 23:55:36 > Server start
+====================Server start====================
+
+2019 March 16, 23:55:44 > Connection from: ('127.0.0.1', 48414).
+2019 March 16, 23:55:44 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 16, 23:55:44 > [OK] Data validated.
+
+2019 March 16, 23:57:34 > Server start
+====================Server start====================
+
+2019 March 16, 23:57:36 > Connection from: ('127.0.0.1', 48422).
+2019 March 16, 23:57:36 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 16, 23:57:36 > [OK] Data validated.
+
+2019 March 16, 23:57:37 > Connection from: ('127.0.0.1', 48424).
+2019 March 16, 23:57:37 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 16, 23:57:37 > [OK] Data validated.
+
+2019 March 16, 23:57:37 > Connection from: ('127.0.0.1', 48426).
+2019 March 16, 23:57:37 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 16, 23:57:37 > [OK] Data validated.
+
+2019 March 16, 23:57:37 > Connection from: ('127.0.0.1', 48428).
+2019 March 16, 23:57:37 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 16, 23:57:37 > [OK] Data validated.
+
+2019 March 16, 23:57:38 > Connection from: ('127.0.0.1', 48430).
+2019 March 16, 23:57:38 > Received data: {'key': '123456', 'name': 'anon', 'string': ' '}.
+2019 March 16, 23:57:38 > [OK] Data validated.
+
+2019 March 16, 23:59:16 > Server start
+====================Server start====================
+
+2019 March 16, 23:59:20 > Connection from: ('127.0.0.1', 48432).
+2019 March 16, 23:59:20 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 16, 23:59:20 > [OK] Data validated.
+
+2019 March 16, 23:59:21 > Connection from: ('127.0.0.1', 48434).
+2019 March 16, 23:59:21 > Received data: {'key': '123456', 'name': 'anon', 'string': ' '}.
+2019 March 16, 23:59:21 > [OK] Data validated.
+
+2019 March 17, 00:00:24 > Server start
+====================Server start====================
+
+2019 March 17, 00:00:29 > Connection from: ('127.0.0.1', 48502).
+2019 March 17, 00:00:29 > Received data: {'key': '123456', 'name': 'anon', 'string': ' '}.
+2019 March 17, 00:00:29 > [OK] Data validated.
+
+2019 March 17, 00:00:31 > Connection from: ('127.0.0.1', 48504).
+2019 March 17, 00:00:31 > Received data: {'key': '123456', 'name': 'anon', 'string': '\x1b[A'}.
+2019 March 17, 00:00:31 > [OK] Data validated.
+
+2019 March 17, 00:00:34 > Connection from: ('127.0.0.1', 48506).
+2019 March 17, 00:00:34 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:00:34 > [OK] Data validated.
+
+2019 March 17, 00:00:34 > Connection from: ('127.0.0.1', 48508).
+2019 March 17, 00:00:34 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:00:34 > [OK] Data validated.
+
+2019 March 17, 00:00:34 > Connection from: ('127.0.0.1', 48510).
+2019 March 17, 00:00:34 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:00:34 > [OK] Data validated.
+
+2019 March 17, 00:00:35 > Connection from: ('127.0.0.1', 48512).
+2019 March 17, 00:00:35 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:00:35 > [OK] Data validated.
+
+2019 March 17, 00:00:35 > Connection from: ('127.0.0.1', 48514).
+2019 March 17, 00:00:35 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:00:35 > [OK] Data validated.
+
+2019 March 17, 00:00:35 > Connection from: ('127.0.0.1', 48516).
+2019 March 17, 00:00:35 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:00:35 > [OK] Data validated.
+
+2019 March 17, 00:00:35 > Connection from: ('127.0.0.1', 48518).
+2019 March 17, 00:00:35 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:00:35 > [OK] Data validated.
+
+2019 March 17, 00:01:46 > Server start
+====================Server start====================
+
+2019 March 17, 00:01:52 > Connection from: ('127.0.0.1', 48520).
+2019 March 17, 00:01:52 > Received data: {'key': '123456', 'name': 'anon', 'string': ' '}.
+2019 March 17, 00:01:52 > [OK] Data validated.
+
+2019 March 17, 00:01:53 > Connection from: ('127.0.0.1', 48524).
+2019 March 17, 00:01:53 > Received data: {'key': '123456', 'name': 'anon', 'string': '\x1b[A'}.
+2019 March 17, 00:01:53 > [OK] Data validated.
+
+2019 March 17, 00:01:54 > Connection from: ('127.0.0.1', 48526).
+2019 March 17, 00:01:54 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:01:54 > [OK] Data validated.
+
+2019 March 17, 00:01:55 > Connection from: ('127.0.0.1', 48528).
+2019 March 17, 00:01:55 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:01:55 > [OK] Data validated.
+
+2019 March 17, 00:01:55 > Connection from: ('127.0.0.1', 48530).
+2019 March 17, 00:01:55 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:01:55 > [OK] Data validated.
+
+2019 March 17, 00:01:55 > Connection from: ('127.0.0.1', 48532).
+2019 March 17, 00:01:55 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:01:55 > [OK] Data validated.
+
+2019 March 17, 00:01:55 > Connection from: ('127.0.0.1', 48534).
+2019 March 17, 00:01:55 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:01:55 > [OK] Data validated.
+
+2019 March 17, 00:01:56 > Connection from: ('127.0.0.1', 48536).
+2019 March 17, 00:01:56 > Received data: {'key': '123456', 'name': 'anon', 'string': ' '}.
+2019 March 17, 00:01:56 > [OK] Data validated.
+
+2019 March 17, 00:03:00 > Server start
+====================Server start====================
+
+2019 March 17, 00:03:03 > Connection from: ('127.0.0.1', 48548).
+2019 March 17, 00:03:03 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:03:03 > [OK] Data validated.
+
+2019 March 17, 00:04:14 > Server start
+====================Server start====================
+
+2019 March 17, 00:04:20 > Connection from: ('127.0.0.1', 48554).
+2019 March 17, 00:04:20 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:04:20 > [OK] Data validated.
+
+2019 March 17, 00:05:24 > Server start
+====================Server start====================
+
+2019 March 17, 00:05:28 > Connection from: ('127.0.0.1', 48556).
+2019 March 17, 00:05:28 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:05:28 > [OK] Data validated.
+
+2019 March 17, 00:06:30 > Connection from: ('127.0.0.1', 48558).
+2019 March 17, 00:06:30 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:06:30 > [OK] Data validated.
+
+2019 March 17, 00:07:34 > Server start
+====================Server start====================
+
+2019 March 17, 00:07:40 > Connection from: ('127.0.0.1', 48562).
+2019 March 17, 00:07:40 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:07:40 > [OK] Data validated.
+
+2019 March 17, 00:07:43 > Connection from: ('127.0.0.1', 48564).
+2019 March 17, 00:07:43 > Received data: {'key': '123456', 'name': 'anon', 'string': ' '}.
+2019 March 17, 00:07:43 > [OK] Data validated.
+
+2019 March 17, 00:10:05 > Server start
+====================Server start====================
+
+2019 March 17, 00:10:08 > Connection from: ('127.0.0.1', 48684).
+2019 March 17, 00:10:08 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:10:08 > [OK] Data validated.
+
+2019 March 17, 00:11:08 > Server start
+====================Server start====================
+
+2019 March 17, 00:11:13 > Connection from: ('127.0.0.1', 48690).
+2019 March 17, 00:11:13 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:11:13 > [OK] Data validated.
+
+2019 March 17, 00:11:14 > Connection from: ('127.0.0.1', 48692).
+2019 March 17, 00:11:14 > Received data: {'key': '123456', 'name': 'anon', 'string': ' '}.
+2019 March 17, 00:11:14 > [OK] Data validated.
+
+2019 March 17, 00:11:16 > Connection from: ('127.0.0.1', 48696).
+2019 March 17, 00:11:16 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:11:16 > [OK] Data validated.
+
+2019 March 17, 00:11:17 > Connection from: ('127.0.0.1', 48698).
+2019 March 17, 00:11:17 > Received data: {'key': '123456', 'name': 'anon', 'string': '   '}.
+2019 March 17, 00:11:17 > [OK] Data validated.
+
+2019 March 17, 00:11:17 > Connection from: ('127.0.0.1', 48700).
+2019 March 17, 00:11:17 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:11:17 > [OK] Data validated.
+
+2019 March 17, 00:11:17 > Connection from: ('127.0.0.1', 48702).
+2019 March 17, 00:11:17 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:11:17 > [OK] Data validated.
+
+2019 March 17, 00:11:18 > Connection from: ('127.0.0.1', 48704).
+2019 March 17, 00:11:18 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:11:18 > [OK] Data validated.
+
+2019 March 17, 00:11:19 > Connection from: ('127.0.0.1', 48706).
+2019 March 17, 00:11:19 > Received data: {'key': '123456', 'name': 'anon', 'string': ' dfd'}.
+2019 March 17, 00:11:19 > [OK] Data validated.
+
+2019 March 17, 00:11:21 > Connection from: ('127.0.0.1', 48708).
+2019 March 17, 00:11:21 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 17, 00:11:21 > [OK] Data validated.
+
+2019 March 17, 00:12:36 > Server start
+====================Server start====================
+
+2019 March 17, 00:12:42 > Connection from: ('127.0.0.1', 48712).
+2019 March 17, 00:12:42 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:12:42 > [OK] Data validated.
+
+2019 March 17, 00:12:43 > Connection from: ('127.0.0.1', 48714).
+2019 March 17, 00:12:43 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:12:43 > [OK] Data validated.
+
+2019 March 17, 00:12:44 > Connection from: ('127.0.0.1', 48716).
+2019 March 17, 00:12:44 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:12:44 > [OK] Data validated.
+
+2019 March 17, 00:12:44 > Connection from: ('127.0.0.1', 48718).
+2019 March 17, 00:12:44 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:12:44 > [OK] Data validated.
+
+2019 March 17, 00:12:44 > Connection from: ('127.0.0.1', 48720).
+2019 March 17, 00:12:44 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:12:44 > [OK] Data validated.
+
+2019 March 17, 00:12:45 > Connection from: ('127.0.0.1', 48722).
+2019 March 17, 00:12:45 > Received data: {'key': '123456', 'name': 'anon', 'string': ' '}.
+2019 March 17, 00:12:45 > [OK] Data validated.
+
+2019 March 17, 00:12:46 > Connection from: ('127.0.0.1', 48724).
+2019 March 17, 00:12:46 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:12:46 > [OK] Data validated.
+
+2019 March 17, 00:12:46 > Connection from: ('127.0.0.1', 48726).
+2019 March 17, 00:12:46 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 00:12:46 > [OK] Data validated.
+
+2019 March 17, 00:12:50 > Connection from: ('127.0.0.1', 48728).
+2019 March 17, 00:12:50 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ls'}.
+2019 March 17, 00:12:50 > [OK] Data validated.
