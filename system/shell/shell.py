@@ -47,20 +47,20 @@ class ShellMan:
                     f = open(appShellDir+"/"+file, 'r')
                     code = f.read()
                     f.close()
-                    
+
                     execLocals = {
                         "ROOT_PATH": ROOT_PATH,
                         "APP_PATH": SYS_APPS_PATH+"/"+i,
                         "COMMANDS": {}
                     }
-                    
+
                     exec(code, globals(), execLocals)
-                    
+
                     Commands = execLocals["COMMANDS"]
-                    
+
                     for name, func in Commands.items():
                         Shell.addCmd(name, func)
-    
+
 
 
 # == Load apps, commands ================================
@@ -91,14 +91,14 @@ def serverAcceptHandler(c, cData):
 def serverAccept(c, cData):
     if type(cData) == dict: # Success.
         cmd = cData["string"].split()[0]
-        
+
         if Shell.isCmd(cmd):
             ret = Shell.runString(cData["string"], cData)
             if type(ret)==dict:
                 if "msg" in ret: c.send(ret["msg"].encode())
         else:
             c.send("no such command".encode())
-        
+
         return True
     else:                  # Syntax error.
         print("An error occured: " + cData)
@@ -106,7 +106,7 @@ def serverAccept(c, cData):
     c.close()
 
 
-Server = server.Server(SERVER_IP, SERVER_KEY, log=True, logfile=SYS_PATH+"/shell/logs/server_log")
+Server = server.Server(SERVER_IP, SERVER_KEY, log=True, logfile=SYS_PATH+"/shell/logs/server.log")
 
 # == END =========================================================
 
@@ -119,6 +119,3 @@ os.chdir(ROOT_PATH+"/home")
 
 while True:
     Server.accept(serverAcceptHandler, closeClient=False)
-
-
-
