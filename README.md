@@ -1,4 +1,5 @@
 How application is fucked up:
+=============================
 
 
 /apps - Applications' static files required to work.
