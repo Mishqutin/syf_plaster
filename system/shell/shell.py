@@ -90,16 +90,20 @@ def serverAcceptHandler(c, cData):
 
 def serverAccept(c, cData):
     if type(cData) == dict: # Success.
-        cmd = cData["string"].split()[0]
+        pre_cmd = cData["string"].split()
+        if len(pre_cmd) > 0:
+            cmd = pre_cmd[0]
 
-        if Shell.isCmd(cmd):
-            ret = Shell.runString(cData["string"], cData)
-            if type(ret)==dict:
-                if "msg" in ret: c.send(ret["msg"].encode())
+            if Shell.isCmd(cmd):
+                ret = Shell.runString(cData["string"], cData)
+                if type(ret)==dict:
+                    if "msg" in ret: c.send(ret["msg"].encode())
+            else:
+                c.send("no such command".encode())
+            return True
         else:
-            c.send("no such command".encode())
+            return False
 
-        return True
     else:                  # Syntax error.
         print("An error occured: " + cData)
         return False
