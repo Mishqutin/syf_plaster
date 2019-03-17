@@ -86,6 +86,7 @@ for i in os.listdir(ROOT_APPS_PATH): # /apps.
 # == SERVER CONFIG ===============================================
 SERVER_IP  = ("localhost", 12345)
 SERVER_KEY = "123456"
+LOG_PATH = SYS_PATH+"/shell/logs/server.log"
 
 def serverAcceptHandler(c, cData):
     if not Running: return
@@ -115,7 +116,7 @@ def serverAccept(c, cData):   # TO-DO: CLEAN UP, FUCKER
     c.close()
 
 
-Server = server.Server(SERVER_IP, SERVER_KEY, log=True, logfile=SYS_PATH+"/shell/logs/server.log")
+Server = server.Server(SERVER_IP, SERVER_KEY, log=True, logfile=LOG_PATH)
 
 # == END =========================================================
 
