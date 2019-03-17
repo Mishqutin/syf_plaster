@@ -5,7 +5,7 @@ import sys
 import subprocess
 
 # Gotta switch to somethin' else, cos deprecated
-import _thread as thread 
+import _thread as thread
 
 from libs.cmdproc import CmdProcessor
 from libs.server import server
@@ -49,20 +49,20 @@ class ShellMan:
                     f = open(appShellDir+"/"+file, 'r')
                     code = f.read()
                     f.close()
-                    
+
                     execLocals = {
                         "ROOT_PATH": ROOT_PATH,
                         "APP_PATH": SYS_APPS_PATH+"/"+i,
                         "COMMANDS": {}
                     }
-                    
+
                     exec(code, globals(), execLocals)
-                    
+
                     Commands = execLocals["COMMANDS"]
-                    
+
                     for name, func in Commands.items():
                         Shell.addCmd(name, func)
-    
+
 
 
 # == Load apps, commands ================================
@@ -91,22 +91,22 @@ def serverAcceptHandler(c, cData):
     thread.start_new_thread(serverAccept, (c, cData))
 
 def serverAccept(c, cData):   # TO-DO: CLEAN UP, FUCKER
-	# cData - client data
-	# c - client socket
-	string = cData["string"] # Full command string
-	
-	if not len(string.split()): return None # Empty string
-	
+    # cData - client data
+    # c - client socket
+    string = cData["string"] # Full command string
+
+    if not len(string.split()): return None # Empty string
+
     if type(cData) == dict: # Success.
         cmd = string.split()[0]
-        
+
         if Shell.isCmd(cmd): # Cmd exists
             ret = Shell.runString(cData["string"], cData)
             if type(ret)==dict:
                 if "msg" in ret: c.send(str(ret["msg"]).encode())
         else:
             c.send("no such command".encode())
-        
+
         return True
     else:                  # Client data syntax error.
         print("An error occured: " + cData)
@@ -129,6 +129,3 @@ print("Running")
 
 while True:
     Server.accept(serverAcceptHandler, closeClient=False)
-
-
-
