@@ -1,9 +1,11 @@
+# Whole system core or so idk.
+#
 import os
 import sys
 import subprocess
 
-
-import _thread as thread
+# Gotta switch to somethin' else, cos deprecated
+import _thread as thread 
 
 from libs.cmdproc import CmdProcessor
 from libs.server import server
@@ -47,20 +49,20 @@ class ShellMan:
                     f = open(appShellDir+"/"+file, 'r')
                     code = f.read()
                     f.close()
-
+                    
                     execLocals = {
                         "ROOT_PATH": ROOT_PATH,
                         "APP_PATH": SYS_APPS_PATH+"/"+i,
                         "COMMANDS": {}
                     }
-
+                    
                     exec(code, globals(), execLocals)
-
+                    
                     Commands = execLocals["COMMANDS"]
-
+                    
                     for name, func in Commands.items():
                         Shell.addCmd(name, func)
-
+    
 
 
 # == Load apps, commands ================================
@@ -88,23 +90,25 @@ SERVER_KEY = "123456"
 def serverAcceptHandler(c, cData):
     thread.start_new_thread(serverAccept, (c, cData))
 
-def serverAccept(c, cData):
+def serverAccept(c, cData):   # TO-DO: CLEAN UP, FUCKER
+	# cData - client data
+	# c - client socket
+	string = cData["string"] # Full command string
+	
+	if not len(string.split()): return None # Empty string
+	
     if type(cData) == dict: # Success.
-        pre_cmd = cData["string"].split()
-        if len(pre_cmd) > 0:
-            cmd = pre_cmd[0]
-
-            if Shell.isCmd(cmd):
-                ret = Shell.runString(cData["string"], cData)
-                if type(ret)==dict:
-                    if "msg" in ret: c.send(ret["msg"].encode())
-            else:
-                c.send("no such command".encode())
-            return True
+        cmd = string.split()[0]
+        
+        if Shell.isCmd(cmd): # Cmd exists
+            ret = Shell.runString(cData["string"], cData)
+            if type(ret)==dict:
+                if "msg" in ret: c.send(str(ret["msg"]).encode())
         else:
-            return False
-
-    else:                  # Syntax error.
+            c.send("no such command".encode())
+        
+        return True
+    else:                  # Client data syntax error.
         print("An error occured: " + cData)
         return False
     c.close()
@@ -120,6 +124,11 @@ os.chdir(ROOT_PATH+"/home")
 
 
 # Program loop.
+print("Current working dir:", os.getcwd())
+print("Running")
 
 while True:
     Server.accept(serverAcceptHandler, closeClient=False)
+
+
+

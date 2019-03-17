@@ -1,5 +1,5 @@
 How application is fucked up:
-=============================
+==============================
 
 
 /apps - Applications' static files required to work.
@@ -30,7 +30,7 @@ it will send hello to the client mothafucka.
 /home - Users' home directory.
 
 
-/README.txt - Essential file for uhhhhh i dunno gtfo
+/README.md - Essential file for uhhhhh i dunno gtfo
 
 
 
@@ -47,5 +47,5 @@ To create a new command:
   dict cData - Client data. I ain't gonna fuck with this here.
 4.After you're done with yo func, store it in dict outside of the class
   called COMMANDS, e.g. COMMANDS["name_of_mah_func"] = func
-
+  
 Yay you're done. Take a look also how's it done in /system/apps.
