@@ -1,0 +1,7 @@
+
+2019 March 17, 21:39:50 > Server start
+====================Server start====================
+
+2019 March 17, 21:39:56 > Connection from: ('127.0.0.1', 50516).
+2019 March 17, 21:39:56 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 17, 21:39:56 > [OK] Data validated.
