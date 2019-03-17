@@ -37,15 +37,16 @@ it will send hello to the client mothafucka.
 
 
 To create a new command:
+
 1.Put a file in /apps/<app>/shell. Must have .py extension.
-2.Inside the file create a new class called COMMAND_CLASS or COMMANDS_CLASS
-  to avoid screwing up other global namespaces (may change later). Whatever just do it.
-3.Now write a new function how you want your command to work.
+
+2.Now write a new function how you want your command to work.
   Must have 3 arguments: cmd, args, cData.
   string cmd - Your commands name. Useful if same function is used for several commands.
   list args - List of arguments (strings) passed.
   dict cData - Client data. I ain't gonna fuck with this here.
-4.After you're done with yo func, store it in dict outside of the class
+  
+4.After you're done with yo func, store it in dict
   called COMMANDS, e.g. COMMANDS["name_of_mah_func"] = func
   
 Yay you're done. Take a look also how's it done in /system/apps.

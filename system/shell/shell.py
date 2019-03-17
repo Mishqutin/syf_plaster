@@ -4,7 +4,7 @@ import os
 import sys
 import subprocess
 
-# Gotta switch to somethin' else, cos deprecated
+# Gotta switch to somethin' else soon, cos deprecated
 import _thread as thread
 
 from libs.cmdproc import CmdProcessor
