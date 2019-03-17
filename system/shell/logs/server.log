@@ -35,3 +35,44 @@
 2019 March 17, 22:25:50 > Connection from: ('127.0.0.1', 53228).
 2019 March 17, 22:25:50 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
 2019 March 17, 22:25:50 > [OK] Data validated.
+
+2019 March 17, 22:30:00 > Server start
+====================Server start====================
+
+2019 March 17, 22:30:03 > Connection from: ('127.0.0.1', 53435).
+2019 March 17, 22:30:03 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 17, 22:30:03 > [OK] Data validated.
+
+2019 March 17, 22:30:06 > Connection from: ('127.0.0.1', 53437).
+2019 March 17, 22:30:06 > Received data: {'key': '123456', 'name': 'anon', 'string': 'shutdown'}.
+2019 March 17, 22:30:06 > [OK] Data validated.
+
+2019 March 17, 22:30:14 > Connection from: ('127.0.0.1', 53446).
+2019 March 17, 22:30:14 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 17, 22:30:14 > [OK] Data validated.
+
+2019 March 17, 22:30:25 > Server start
+====================Server start====================
+
+2019 March 17, 22:30:28 > Connection from: ('127.0.0.1', 53458).
+2019 March 17, 22:30:28 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 17, 22:30:28 > [OK] Data validated.
+
+2019 March 17, 22:30:31 > Connection from: ('127.0.0.1', 53460).
+2019 March 17, 22:30:31 > Received data: {'key': '123456', 'name': 'anon', 'string': 'shutdown'}.
+2019 March 17, 22:30:31 > [OK] Data validated.
+
+2019 March 17, 22:30:57 > Connection from: ('127.0.0.1', 53483).
+2019 March 17, 22:30:57 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 22:30:57 > [OK] Data validated.
+
+2019 March 17, 22:32:56 > Server start
+====================Server start====================
+
+2019 March 17, 22:32:59 > Connection from: ('127.0.0.1', 53585).
+2019 March 17, 22:32:59 > Received data: {'key': '123456', 'name': 'anon', 'string': 'shutdown'}.
+2019 March 17, 22:32:59 > [OK] Data validated.
+
+2019 March 17, 22:33:03 > Connection from: ('127.0.0.1', 53589).
+2019 March 17, 22:33:03 > Received data: {'key': '123456', 'name': 'anon', 'string': ''}.
+2019 March 17, 22:33:03 > [OK] Data validated.

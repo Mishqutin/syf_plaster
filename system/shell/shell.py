@@ -88,6 +88,7 @@ SERVER_IP  = ("localhost", 12345)
 SERVER_KEY = "123456"
 
 def serverAcceptHandler(c, cData):
+    if not Running: return
     thread.start_new_thread(serverAccept, (c, cData))
 
 def serverAccept(c, cData):   # TO-DO: CLEAN UP, FUCKER
@@ -127,5 +128,6 @@ os.chdir(ROOT_PATH+"/home")
 print("Current working dir:", os.getcwd())
 print("Running")
 
-while True:
+Running = True
+while Running:
     Server.accept(serverAcceptHandler, closeClient=False)
