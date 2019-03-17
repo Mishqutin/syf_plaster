@@ -17,10 +17,8 @@ COMMANDS["reload"] = reload
 
 
 def shutdown(cmd, args, cData):
-    global Running
-    Running = False
     msg = "System shutdown."
-    return {"msg": msg}
+    return {"msg": msg, "code": 1}
 COMMANDS["shutdown"] = shutdown
 
 

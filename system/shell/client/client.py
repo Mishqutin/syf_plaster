@@ -2,13 +2,9 @@ import socket
 
 
 class Client:
-
-    def __init__(self):
-        pass
-    
-    def connect(self, ip, data):
+    def connect(ip, data):
         s = socket.socket()
-        
+
         s.connect(ip)
         s.send(str(data).encode())
         data = (s.recv(65536)).decode("UTF-8")
@@ -18,8 +14,6 @@ class Client:
 
 
 if __name__=="__main__":
-    myClient = Client()
-    
     IP = ("localhost", 12345)
     KEY = "123456"
     NAME = "anon"
@@ -27,6 +21,6 @@ if __name__=="__main__":
     while True:
         command = input("Cmd: ")
         data = {"key": KEY, "name": NAME, "string": command}
-        
-        recvData = myClient.connect(IP, data)
+
+        recvData = Client.connect(IP, data)
         if recvData: print(recvData)

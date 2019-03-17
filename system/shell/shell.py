@@ -10,6 +10,7 @@ import _thread as thread
 from libs.cmdproc import CmdProcessor
 from libs.server import server
 from libs.os_shell import RunShell
+from client.client import Client
 
 
 
@@ -63,6 +64,13 @@ class ShellMan:
                     for name, func in Commands.items():
                         Shell.addCmd(name, func)
 
+    def shutdown():
+        global Running
+
+        Running = False
+        data = {"key": SERVER_KEY, "name": "shell", "string": "ping"}
+        Client.connect(SERVER_IP, data)
+
 
 
 # == Load apps, commands ================================
@@ -92,20 +100,31 @@ def serverAcceptHandler(c, cData):
     if not Running: return
     thread.start_new_thread(serverAccept, (c, cData))
 
-def serverAccept(c, cData):   # TO-DO: CLEAN UP, FUCKER
+def serverAccept(c, cData):   # TO-DO: CLEAN UP, FUCKER.
     # cData - client data
     # c - client socket
-    string = cData["string"] # Full command string
+    global Running
+    string = cData["string"] # Full command string.
 
     if not len(string.split()): return None # Empty string
 
     if type(cData) == dict: # Success.
         cmd = string.split()[0]
 
-        if Shell.isCmd(cmd): # Cmd exists
+        if Shell.isCmd(cmd): # Cmd exists.
+            # Run command.
             ret = Shell.runString(cData["string"], cData)
+
             if type(ret)==dict:
-                if "msg" in ret: c.send(str(ret["msg"]).encode())
+                if "msg" in ret:
+                    # "msg" - message for client
+                    msg = str(ret["msg"])
+                    c.send(msg.encode())
+                if "code" in ret:
+                    # "code" - certain action
+                    code = ret["code"]
+                    if code==1: # 1 - shutdown
+                        ShellMan.shutdown()
         else:
             c.send("no such command".encode())
 
