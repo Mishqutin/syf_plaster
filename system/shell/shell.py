@@ -91,16 +91,33 @@ class ShellMan:
 
     def shutdown():
         """Shutdown system.
-        Stops program loop and ends main thread.
+        Stop program loop and end main thread.
+
+        Please use ShellMan.code(1) instead.
         """
         global Running
 
         # Stop program loop.
         Running = False
         # Send last message to socket to 'wake' and close main thread.
+        # See ServerAcceptHandler function before the eof.
         data = {"key": SERVER_KEY, "name": "shell", "string": "ping"}
         Client.connect(SERVER_IP, data)
 
+    def code(n):
+        """Execute certain shell action.
+
+        None code(n)
+        int n -- Code.
+                 Raise a TypeError if n isn't int type.
+
+        Codes:
+         1 - Shutdown system.
+        """
+        if type(n)!=int: raise TypeError("code argument must be of int type.")
+
+        if n==1: # 1 - shutdown
+            ShellMan.shutdown()
 
 
 # == Load apps, commands =====================================================
@@ -154,12 +171,11 @@ def serverAccept(c, cData):   # TO-DO: CLEAN UP, FUCKER.
                     msg = str(ret["msg"])
                     c.send(msg.encode())
                 if "code" in ret:
-                    # "code" - certain action.
+                    # "code" - certain shell action.
                     code = ret["code"]
-                    if code==1: # 1 - shutdown.
-                        ShellMan.shutdown()
+                    ShellMan.code(code)
         else:
-            c.send("no such command".encode())
+            c.send(cmd + ": command not found.".encode())
 
         return True
     else:                  # Client data syntax error.
