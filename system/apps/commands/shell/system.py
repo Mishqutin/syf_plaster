@@ -26,7 +26,7 @@ COMMANDS["shutdown"] = shutdown
 
 
 def sleep(cmd, args, cData):
-    """sleep <time> [<message>]
+    """Usage: sleep <time> [<message>]
     Stop thread execution for a number of seconds.
     Optionally display message at the end."""
     from time import sleep as tsleep

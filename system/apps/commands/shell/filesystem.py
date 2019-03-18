@@ -6,10 +6,12 @@
 
 
 def pwd(cmd, args, cData):
+    """Print current working directory."""
     return {"msg": os.getcwd()}
 COMMANDS["pwd"] = pwd
 
 def ls(cmd, args, cData):
+    """List current directory elements."""
     if len(args)>0:
         return {"msg": ', '.join(os.listdir(args[0]))}
     else:
@@ -17,6 +19,8 @@ def ls(cmd, args, cData):
 COMMANDS["ls"] = ls
 
 def cd(cmd, args, cData):
+    """Usage: cd <path>
+    Change directory."""
     try:
         os.chdir(args[0])
     except Exception as e:
@@ -24,6 +28,8 @@ def cd(cmd, args, cData):
 COMMANDS["cd"] = cd
 
 def cat(cmd, args, cData):
+    """Usage: cat <file>
+    Concatenate file to client's socket."""
     if len(args)==1:
         file = args[0]
         if os.path.isfile(file):
@@ -39,6 +45,8 @@ def cat(cmd, args, cData):
 COMMANDS["cat"] = cat
 
 def stat(cmd, args, cData):
+    """Usage: stat <file>
+    Show file stats in some fucked up syntax."""
     if len(args)==1:
         file = args[0]
         if os.path.isfile(file):
