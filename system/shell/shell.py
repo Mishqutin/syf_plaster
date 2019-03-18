@@ -151,7 +151,8 @@ class ServerMan:
         if not len(string.split()): return None # Empty string.
 
         if type(cData) == dict: # Success.
-            cmd = string.split()[0]
+            cmdSplit = string.split()
+            cmd = cmdSplit[0]
 
             if Shell.isCmd(cmd): # Cmd exists.
                 # Run command.
