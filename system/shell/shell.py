@@ -155,7 +155,8 @@ class ServerMan:
 
             if Shell.isCmd(cmd): # Cmd exists.
                 # Run command.
-                ret = Shell.runString(cData["string"], cData)
+                cmdString = cData["string"]
+                ret = Shell.runString(cmdString, cData)
 
                 if type(ret)==dict:
                     if "msg" in ret:
