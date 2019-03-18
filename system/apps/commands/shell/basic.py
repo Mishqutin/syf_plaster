@@ -1,35 +1,43 @@
 
 
-commands = {}
+
 
 def ping(cmd, args, cData):
-    return {"msg": "Pong"}
-commands["ping"] = ping
+    """Send Ping and receive Pong.
+    Ping Pong!"""
+    msg = "Pong"
+    return {"msg": msg}
+COMMANDS["ping"] = ping
+COMMANDS["Ping"] = ping
+
+def pong(cmd, args, cData):
+    """Command doesn't exist."""
+    msg = "Wait, that's illegal!"
+    return {"msg": msg}
+COMMANDS["pong"] = ping
+COMMANDS["Pong"] = ping
 
 def echo(cmd, args, cData):
-    return {"msg": ' '.join(args)}
-commands["echo"] = echo
+    """echo <message>
 
-def conEcho(cmd, args, cData):
+    Echo message back to client."""
+    return {"msg": ' '.join(args)}
+COMMANDS["echo"] = echo
+
+def consoleprint(cmd, args, cData):
+    """print <message>
+
+    Print message to host's console."""
     print(' '.join(args))
-commands["conEcho"] = conEcho
+COMMANDS["print"] = consoleprint
 
 
 
 
 
 def localname(cmd, args, cData):
+    """localname
+
+    Get your name."""
     return {"msg": cData["name"]}
-commands["localname"] = localname
-
-
-
-
-
-
-
-
-
-
-
-COMMANDS = commands
+COMMANDS["localname"] = localname
