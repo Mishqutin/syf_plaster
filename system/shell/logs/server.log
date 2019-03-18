@@ -385,3 +385,89 @@
 2019 March 18, 20:35:46 > Connection from: ('127.0.0.1', 50409).
 2019 March 18, 20:35:46 > Received data: {'key': '123456', 'name': 'ShellMan.shutdown', 'string': 'ping'}.
 2019 March 18, 20:35:46 > [OK] Data validated.
+
+2019 March 18, 20:47:16 > Server start
+====================Server start====================
+
+2019 March 18, 20:47:20 > Connection from: ('127.0.0.1', 50411).
+2019 March 18, 20:47:20 > Received data: {'key': '123456', 'name': 'anon', 'string': 'help'}.
+2019 March 18, 20:47:20 > [OK] Data validated.
+
+2019 March 18, 20:47:23 > Connection from: ('127.0.0.1', 50412).
+2019 March 18, 20:47:23 > Received data: {'key': '123456', 'name': 'anon', 'string': 'help sdaf dsaf'}.
+2019 March 18, 20:47:23 > [OK] Data validated.
+
+2019 March 18, 20:47:26 > Connection from: ('127.0.0.1', 50413).
+2019 March 18, 20:47:26 > Received data: {'key': '123456', 'name': 'anon', 'string': 'help sdaf'}.
+2019 March 18, 20:47:26 > [OK] Data validated.
+
+2019 March 18, 20:47:29 > Connection from: ('127.0.0.1', 50414).
+2019 March 18, 20:47:29 > Received data: {'key': '123456', 'name': 'anon', 'string': 'help help'}.
+2019 March 18, 20:47:29 > [OK] Data validated.
+
+2019 March 18, 20:47:32 > Connection from: ('127.0.0.1', 50415).
+2019 March 18, 20:47:32 > Received data: {'key': '123456', 'name': 'anon', 'string': 'help ls'}.
+2019 March 18, 20:47:32 > [OK] Data validated.
+
+2019 March 18, 20:47:39 > Connection from: ('127.0.0.1', 50416).
+2019 March 18, 20:47:39 > Received data: {'key': '123456', 'name': 'anon', 'string': 'help ping'}.
+2019 March 18, 20:47:39 > [OK] Data validated.
+
+2019 March 18, 20:47:56 > Connection from: ('127.0.0.1', 50417).
+2019 March 18, 20:47:56 > Received data: {'key': '123456', 'name': 'anon', 'string': 'help echo'}.
+2019 March 18, 20:47:56 > [OK] Data validated.
+
+2019 March 18, 20:48:13 > Connection from: ('127.0.0.1', 50418).
+2019 March 18, 20:48:13 > Received data: {'key': '123456', 'name': 'anon', 'string': 'reload'}.
+2019 March 18, 20:48:13 > [OK] Data validated.
+
+2019 March 18, 20:48:15 > Connection from: ('127.0.0.1', 50419).
+2019 March 18, 20:48:15 > Received data: {'key': '123456', 'name': 'anon', 'string': 'help echo'}.
+2019 March 18, 20:48:15 > [OK] Data validated.
+
+2019 March 18, 20:48:33 > Connection from: ('127.0.0.1', 50420).
+2019 March 18, 20:48:33 > Received data: {'key': '123456', 'name': 'anon', 'string': 'reload'}.
+2019 March 18, 20:48:33 > [OK] Data validated.
+
+2019 March 18, 20:48:34 > Connection from: ('127.0.0.1', 50421).
+2019 March 18, 20:48:34 > Received data: {'key': '123456', 'name': 'anon', 'string': 'help echo'}.
+2019 March 18, 20:48:34 > [OK] Data validated.
+
+2019 March 18, 20:49:11 > Connection from: ('127.0.0.1', 50428).
+2019 March 18, 20:49:11 > Received data: {'key': '123456', 'name': 'anon', 'string': 'reload'}.
+2019 March 18, 20:49:11 > [OK] Data validated.
+
+2019 March 18, 20:49:13 > Connection from: ('127.0.0.1', 50429).
+2019 March 18, 20:49:13 > Received data: {'key': '123456', 'name': 'anon', 'string': 'help echo'}.
+2019 March 18, 20:49:13 > [OK] Data validated.
+
+2019 March 18, 20:51:38 > Connection from: ('127.0.0.1', 50445).
+2019 March 18, 20:51:38 > Received data: {'key': '123456', 'name': 'anon', 'string': 'shutdown'}.
+2019 March 18, 20:51:38 > [OK] Data validated.
+
+2019 March 18, 20:51:38 > Connection from: ('127.0.0.1', 50446).
+2019 March 18, 20:51:38 > Received data: {'key': '123456', 'name': 'ShellMan.shutdown', 'string': 'ping'}.
+2019 March 18, 20:51:38 > [OK] Data validated.
+
+2019 March 18, 20:51:40 > Server start
+====================Server start====================
+
+2019 March 18, 20:51:46 > Connection from: ('127.0.0.1', 50448).
+2019 March 18, 20:51:46 > Received data: {'key': '123456', 'name': 'anon', 'string': 'help echo'}.
+2019 March 18, 20:51:46 > [OK] Data validated.
+
+2019 March 18, 20:52:32 > Connection from: ('127.0.0.1', 50453).
+2019 March 18, 20:52:32 > Received data: {'key': '123456', 'name': 'anon', 'string': 'reload'}.
+2019 March 18, 20:52:32 > [OK] Data validated.
+
+2019 March 18, 20:52:39 > Connection from: ('127.0.0.1', 50454).
+2019 March 18, 20:52:39 > Received data: {'key': '123456', 'name': 'anon', 'string': 'help echo'}.
+2019 March 18, 20:52:39 > [OK] Data validated.
+
+2019 March 18, 20:53:11 > Connection from: ('127.0.0.1', 50455).
+2019 March 18, 20:53:11 > Received data: {'key': '123456', 'name': 'anon', 'string': 'reload'}.
+2019 March 18, 20:53:11 > [OK] Data validated.
+
+2019 March 18, 20:53:12 > Connection from: ('127.0.0.1', 50456).
+2019 March 18, 20:53:12 > Received data: {'key': '123456', 'name': 'anon', 'string': 'help echo'}.
+2019 March 18, 20:53:12 > [OK] Data validated.

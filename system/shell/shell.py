@@ -3,6 +3,7 @@
 import os
 import sys
 import subprocess
+import inspect
 
 # Gotta switch to somethin' else soon, cos deprecated
 import _thread as thread
