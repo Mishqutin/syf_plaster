@@ -24,8 +24,8 @@ ROOT_PATH = os.path.normpath( os.path.abspath(SYS_PATH+"/..") )
 ROOT_APPS_PATH = os.path.normpath( os.path.abspath(ROOT_PATH+"/apps") )
 
 # Something wrong with the working path -> show a sad message.
-if not os.path.basename(SYS_PATH)=="system"
-   or not os.path.basename(os.getcwd())=="shell":
+if (not os.path.basename(SYS_PATH)=="system"
+    or not os.path.basename(os.getcwd())=="shell"):
     errorMessage = """\
 ==Error==
 >Wrong or renamed directory!
