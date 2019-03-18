@@ -491,3 +491,15 @@
 2019 March 18, 21:42:44 > Connection from: ('127.0.0.1', 50676).
 2019 March 18, 21:42:44 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
 2019 March 18, 21:42:44 > [OK] Data validated.
+
+2019 March 18, 21:44:07 > Connection from: ('127.0.0.1', 50749).
+2019 March 18, 21:44:07 > Received data: {'key': '123456', 'name': 'anon', 'string': 'ping'}.
+2019 March 18, 21:44:07 > [OK] Data validated.
+
+2019 March 18, 21:46:20 > Connection from: ('127.0.0.1', 50769).
+2019 March 18, 21:46:20 > Received data: {'key': '123456', 'name': 'anon', 'string': 'shutdown'}.
+2019 March 18, 21:46:20 > [OK] Data validated.
+
+2019 March 18, 21:46:20 > Connection from: ('127.0.0.1', 50770).
+2019 March 18, 21:46:20 > Received data: {'key': '123456', 'name': 'ShellMan.shutdown', 'string': 'ping'}.
+2019 March 18, 21:46:20 > [OK] Data validated.
