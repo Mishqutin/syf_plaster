@@ -41,12 +41,22 @@ Proper path to file should be:
     sys.exit(1)
 
 
+
 # Shell's command processor.
 Shell = CmdProcessor()
 
 # Shell manager.
 class ShellMan:
     """Manages shell actions like loading new shit, shutdown etc.""" # TODO:Clean.
+
+    config = {}
+    def loadConfig():
+        """Load configuration file into ShellMan.config as dict type."""
+        f = open(SYS_PATH+"/config.cfg", 'r')
+        configStr = f.read()
+        f.close()
+
+        ShellMan.config = eval(configStr)
 
 
     def loadApp(path):         # Lol over 80 long docstr line what do? here V.
@@ -101,8 +111,8 @@ class ShellMan:
         Running = False
         # Send last message to socket to 'wake' and close main thread.
         # See ServerAcceptHandler function before the eof.
-        data = {"key": SERVER_KEY, "name": "shell", "string": "ping"}
-        ip = ("localhost", SERVER_IP[1])
+        data = {"key": ShellMan.config["Server.Key"], "name": "shell", "string": "ping"}
+        ip = ("localhost", ShellMan.config["Server.Port"])
         Client.connect(SERVER_IP, data)
 
     def code(n):
@@ -123,6 +133,8 @@ class ShellMan:
 
 # == Load apps, commands =====================================================
 
+ShellMan.loadConfig()
+
 for i in os.listdir(SYS_APPS_PATH): # /system/apps.
     if os.path.isdir(SYS_APPS_PATH+"/"+i):
         ShellMan.loadApp(SYS_APPS_PATH+"/"+i)
@@ -140,8 +152,11 @@ for i in os.listdir(ROOT_APPS_PATH): # /apps.
 
 
 # == SERVER CONFIG ===========================================================
-SERVER_IP  = ("localhost", 12345)
-SERVER_KEY = "123456"
+SERVER_ADDRESS = ShellMan.config["Server.Address"]
+SERVER_PORT    = ShellMan.config["Server.Port"]
+SERVER_IP = (SERVER_ADDRESS, SERVER_PORT)
+SERVER_KEY = ShellMan.config["Server.Key"]
+
 LOG_PATH = SYS_PATH+"/shell/logs/server.log"
 
 def serverAcceptHandler(c, cData):
