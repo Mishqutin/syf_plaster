@@ -471,3 +471,19 @@
 2019 March 18, 20:53:12 > Connection from: ('127.0.0.1', 50456).
 2019 March 18, 20:53:12 > Received data: {'key': '123456', 'name': 'anon', 'string': 'help echo'}.
 2019 March 18, 20:53:12 > [OK] Data validated.
+
+2019 March 18, 21:05:00 > Connection from: ('127.0.0.1', 50466).
+2019 March 18, 21:05:00 > Received data: {'key': '123456', 'name': 'anon', 'string': 'reload'}.
+2019 March 18, 21:05:00 > [OK] Data validated.
+
+2019 March 18, 21:05:05 > Connection from: ('127.0.0.1', 50467).
+2019 March 18, 21:05:05 > Received data: {'key': '123456', 'name': 'anon', 'string': 'listcmd'}.
+2019 March 18, 21:05:05 > [OK] Data validated.
+
+2019 March 18, 21:05:15 > Connection from: ('127.0.0.1', 50468).
+2019 March 18, 21:05:15 > Received data: {'key': '123456', 'name': 'anon', 'string': 'help ziprun'}.
+2019 March 18, 21:05:15 > [OK] Data validated.
+
+2019 March 18, 21:06:35 > Connection from: ('127.0.0.1', 50469).
+2019 March 18, 21:06:35 > Received data: {'key': '123456', 'name': 'anon', 'string': 'help listcmd'}.
+2019 March 18, 21:06:35 > [OK] Data validated.
