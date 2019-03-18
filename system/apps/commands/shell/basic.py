@@ -41,7 +41,7 @@ COMMANDS["localname"] = localname
 
 
 
-def help(cmd, args, cData):
+def help(cmd, args, cData):  # TODO: Clean up.
     """Usage: help <command>"""
     if len(args)==1:
         command = args[0]
@@ -59,3 +59,10 @@ help: syntax error.
 Usage: help <command>"""
     return {"msg": msg}
 COMMANDS["help"] = help
+
+
+def listcmd(cmd, args, cData):
+    """Show all available commands."""
+    msg = ', '.join(Shell.commands)
+    return {"msg": msg}
+COMMANDS["listcmd"] = listcmd
