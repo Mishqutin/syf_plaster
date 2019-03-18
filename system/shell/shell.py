@@ -102,6 +102,7 @@ class ShellMan:
         # Send last message to socket to 'wake' and close main thread.
         # See ServerAcceptHandler function before the eof.
         data = {"key": SERVER_KEY, "name": "shell", "string": "ping"}
+        ip = ("localhost", SERVER_IP[1])
         Client.connect(SERVER_IP, data)
 
     def code(n):
