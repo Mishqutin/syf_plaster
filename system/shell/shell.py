@@ -222,7 +222,7 @@ Server = server.Server(SERVER_IP, SERVER_KEY, log=True, logfile=LOG_PATH)
 
 
 # Go home. See ya!
-os.chdir(ROOT_PATH+"/home")
+os.chdir(ROOT_PATH+"/home") # /home
 
 # == INIT END ================================================================
 
