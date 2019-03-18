@@ -75,6 +75,8 @@ class ShellMan:
         """
         global Running
 
+        print("Shutdown...")
+
         # Stop program loop.
         Running = False
         # Send last message to socket to 'wake' and close main thread.
@@ -178,15 +180,15 @@ class ServerMan:
 # == INIT ====================================================================
 
 # Path constants.
-SYS_PATH = os.path.normpath( os.path.abspath(os.getcwd()+"/..") )
-SYS_SHELL_PATH = os.path.normpath( SYS_PATH+"/shell" )
-SYS_APPS_PATH = os.path.normpath( SYS_PATH+"/apps" )
+SYS_PATH = os.path.normpath( os.path.abspath(os.getcwd()+"/..") ) # /system
+SYS_APPS_PATH = os.path.normpath( SYS_PATH+"/apps" )              # /system/apps
+SYS_SHELL_PATH = os.path.normpath( SYS_PATH+"/shell" )            # /system/shell
 
-ROOT_PATH = os.path.normpath( os.path.abspath(SYS_PATH+"/..") )
-ROOT_APPS_PATH = os.path.normpath( os.path.abspath(ROOT_PATH+"/apps") )
+ROOT_PATH = os.path.normpath( os.path.abspath(SYS_PATH+"/..") )         # /
+ROOT_APPS_PATH = os.path.normpath( os.path.abspath(ROOT_PATH+"/apps") ) # /apps
 
-if (not os.path.basename(SYS_PATH)=="system"
-    or not os.path.basename(os.getcwd())=="shell"):
+if (not os.path.basename(SYS_PATH)=="system" # no /system
+    or not os.path.basename(os.getcwd())=="shell"): # no ../shell
     ShellMan.code(-1) # Wrong directory structure.
 
 
@@ -198,11 +200,11 @@ ShellMan.loadConfig()
 Shell = CmdProcessor()
 
 # Load apps, commands -> Shell CmdProcessor.
-for i in os.listdir(SYS_APPS_PATH): # /system/apps.
+for i in os.listdir(SYS_APPS_PATH): # /system/apps
     if os.path.isdir(SYS_APPS_PATH+"/"+i):
         ShellMan.loadApp(SYS_APPS_PATH+"/"+i)
 
-for i in os.listdir(ROOT_APPS_PATH): # /apps.
+for i in os.listdir(ROOT_APPS_PATH): # /apps
     if os.path.isdir(ROOT_APPS_PATH+"/"+i):
         ShellMan.loadApp(ROOT_APPS_PATH+"/"+i)
 
@@ -212,7 +214,7 @@ SERVER_KEY = ShellMan.config["Server.Key"]
 SERVER_ADDRESS = ShellMan.config["Server.Address"]
 SERVER_PORT    = ShellMan.config["Server.Port"]
 SERVER_IP = (SERVER_ADDRESS, SERVER_PORT)
-# Log path's currently static.
+# Log path's static.
 LOG_PATH = SYS_PATH+"/shell/logs/server.log"
 
 # Init shell's server.
@@ -230,11 +232,13 @@ os.chdir(ROOT_PATH+"/home")
 
 # == PROGRAM LOOP ============================================================
 print("Current working dir:", os.getcwd())
-print("Running")
+print(">Running<")
 
 Running = True
 while Running:
     Server.accept(ServerMan.serverAcceptHandler, closeClient=False)
+
+print(">Quit.<")
 
 # == PROGRAM LOOP END ========================================================
 
