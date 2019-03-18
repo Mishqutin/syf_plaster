@@ -13,11 +13,11 @@ from libs.os_shell import RunShell
 from client.client import Client
 
 
+# == CLASSES =================================================================
 
-
-# Shell manager.
+# SHELL FUNCTIONS.
 class ShellMan:
-    """Manages shell actions like loading new shit, shutdown etc.""" # TODO:Clean.
+    """Manages shell actions like loading new shit, shutdown etc.""" # TODO:Clean docstr.
 
     config = {}
     def loadConfig():
@@ -67,8 +67,6 @@ class ShellMan:
         else:
             return False
 
-
-
     def shutdown():
         """Shutdown system.
         Stop program loop and end main thread.
@@ -81,8 +79,11 @@ class ShellMan:
         Running = False
         # Send last message to socket to 'wake' and close main thread.
         # See ServerAcceptHandler function before the eof.
-        data = {"key": ShellMan.config["Server.Key"], "name": "shell", "string": "ping"}
-        ip = ("localhost", ShellMan.config["Server.Port"])
+        key = ShellMan.config["Server.Key"]
+        port = ShellMan.config["Server.Port"]
+
+        data = {"key": key, "name": "ShellMan.shutdown", "string": "ping"}
+        ip = ("localhost", port)
         Client.connect(SERVER_IP, data)
 
     def code(n):
@@ -100,10 +101,11 @@ class ShellMan:
         """
         if type(n)!=int: raise TypeError("code argument must be of int type.")
 
+        # Positive.
         if n==1: # 1 - shutdown
             ShellMan.shutdown()
-
-        elif n==-1:
+        # Negative.
+        elif n==-1: # -1 - wrong dir error
             ShellMan._fail_wrongPath()
 
     def _fail_wrongPath():
@@ -121,16 +123,23 @@ Proper path to file should be:
         # Exit with error.
         sys.exit(1)
 
-# Server functions.
+
+# SERVER FUNCTIONS.
 class ServerMan:
+    """Functions used to operate shell's Server.
+    -serverAcceptHandler(c, cData)
+    -serverAccept(c, cData)"""
+
     def serverAcceptHandler(c, cData):
+        """Pass the client's request to a new thread and continue to the main loop."""
         if not Running: return # Server shutdown - quit. See ShellMan.shutdown.
 
         # Fulfill client's task in separate thread so main process can continue.
         thread.start_new_thread(ServerMan.serverAccept, (c, cData))
         # Continue to main loop.
 
-    def serverAccept(c, cData):   # TO-DO: CLEAN UP, FUCKER.
+    def serverAccept(c, cData): # TODO: Clean up, comment, etc.
+        """Handle the client's request."""
         # cData - client data.
         # c - client socket.
         global Running
@@ -163,6 +172,9 @@ class ServerMan:
             return False
         c.close()
 
+# == CLASSES END =============================================================
+
+
 # == INIT ====================================================================
 
 # Path constants.
@@ -174,7 +186,7 @@ ROOT_PATH = os.path.normpath( os.path.abspath(SYS_PATH+"/..") )
 ROOT_APPS_PATH = os.path.normpath( os.path.abspath(ROOT_PATH+"/apps") )
 
 if (not os.path.basename(SYS_PATH)=="system"
-    or not os.path.basename(os.getcwd())=="shell" or True):
+    or not os.path.basename(os.getcwd())=="shell"):
     ShellMan.code(-1) # Wrong directory structure.
 
 
@@ -224,7 +236,7 @@ Running = True
 while Running:
     Server.accept(ServerMan.serverAcceptHandler, closeClient=False)
 
-# == END PROGRAM LOOP ========================================================
+# == PROGRAM LOOP END ========================================================
 
 
 # EOF
