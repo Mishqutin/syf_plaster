@@ -14,8 +14,8 @@ def pong(cmd, args, cData):
     """Command doesn't exist."""
     msg = "Wait, that's illegal!"
     return {"msg": msg}
-COMMANDS["pong"] = ping
-COMMANDS["Pong"] = ping
+COMMANDS["pong"] = pong
+COMMANDS["Pong"] = pong
 
 def echo(cmd, args, cData):
     """echo <message>
