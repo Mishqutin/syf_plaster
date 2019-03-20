@@ -6,11 +6,31 @@ from main.serverman import ServerManager
 
 from libs.server import server
 
+print("Init Shell (Manager).")
+Shell = ShellManager()
 
-Shell = ShellManager(includeTestCmd=True)
-Shell.loadConfig()
+# Load apps, commands -> Shell CmdProcessor.
+print("Loading apps.")
+print(" /system/apps")
+for i in os.listdir(SYS_APPS_PATH): # /system/apps
+    if os.path.isdir(SYS_APPS_PATH+"/"+i):
+        Shell.loadApp(SYS_APPS_PATH+"/"+i)
+print(" /apps")
+for i in os.listdir(ROOT_APPS_PATH): # /apps
+    if os.path.isdir(ROOT_APPS_PATH+"/"+i):
+        Shell.loadApp(ROOT_APPS_PATH+"/"+i)
 
+
+
+
+print("Init Server Manager.")
 ServerMan = ServerManager(Shell.Cmd, Shell)
+
+
+
+
+
+
 
 # Server config.
 print("Server config")
@@ -27,11 +47,14 @@ Server = server.Server(SERVER_IP, SERVER_KEY, log=True, logfile=LOG_PATH)
 
 print("Init done!")
 print("Running")
-while Running:
+
+while Settings["Running"]:
     try:
         Server.accept(ServerMan.serverAcceptHandler, closeClient=False)
     except KeyboardInterrupt:
         break
+
+
 
 print("Server close")
 Server.close()

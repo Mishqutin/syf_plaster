@@ -8,6 +8,7 @@ import inspect
 # Gotta switch to somethin' else soon, cos deprecated
 import _thread as thread
 
+from libs.os_shell import RunShell
 from client.client import Client
 
 # THE ALMIGHTY VlaD-PUTIN!
@@ -23,7 +24,10 @@ ROOT_PATH = os.path.normpath( os.path.abspath(SYS_PATH+"/..") )         # /
 ROOT_APPS_PATH = os.path.normpath( os.path.abspath(ROOT_PATH+"/apps") ) # /apps
 
 
-Running = True
+# dict Settings - settings/flags for program.
+Settings = {}
+Settings["Running"] = True
+
 
 
 

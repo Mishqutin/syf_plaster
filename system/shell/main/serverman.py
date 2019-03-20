@@ -8,13 +8,12 @@ class ServerManager:
     -serverAccept(c, cData)"""
 
     def __init__(self, shell, shellmngr):
-        print("Server Manager Init")
         self.Shell = shell
         self.ShellMan = shellmngr
 
     def serverAcceptHandler(self, c, cData):
         """Pass the client's request to a new thread and continue to the main loop."""
-        if not Running: return # Server shutdown - quit. See ShellMan.shutdown.
+        if not Settings["Running"]: return # Server shutdown - quit. See ShellMan.shutdown.
 
         # Fulfill client's task in separate thread so main process can continue.
         thread.start_new_thread(self.serverAccept, (c, cData))
