@@ -1,3 +1,5 @@
+# Server manager!
+# last commit: Mishqutin - master - 20.03.2019
 from main.config import *
 
 
@@ -28,26 +30,7 @@ class ServerManager:
         if not len(string.split()): return None # Empty string.
 
         if type(cData) == dict: # Success.
-            cmdSplit = string.split()
-            cmd = cmdSplit[0]
-
-            if self.Shell.isCmd(cmd): # Cmd exists.
-                # Run command.
-                cmdString = cData["string"]
-                ret = self.Shell.runString(cmdString, cData)
-
-                if type(ret)==dict:
-                    if "msg" in ret:
-                        # "msg" - message for client.
-                        msg = str(ret["msg"])
-                        c.send(msg.encode())
-                    if "code" in ret:
-                        # "code" - certain shell action.
-                        code = ret["code"]
-                        self.ShellMan.code(code)
-            else:
-                c.send((cmd + ": command not found.").encode())
-
+            self.processCommand(c, cData)
             return True
         else:                  # Client data syntax error.
             print("An error occured: " + cData)
@@ -55,5 +38,27 @@ class ServerManager:
         c.close()
 
 
+    def processCommand(self, c, cData):
+        string = cData["string"]
+
+        cmdSplit = string.split()
+        cmd = cmdSplit[0]
+        if self.Shell.isCmd(cmd): # Cmd exists.
+            # Run command.
+            ret = self.Shell.runString(string, cData)
+
+            if type(ret)==dict:
+                if "msg" in ret:
+                    # "msg" - message for client.
+                    msg = str(ret["msg"])
+                    c.send(msg.encode())
+                if "code" in ret:
+                    # "code" - certain shell action.
+                    code = ret["code"]
+                    self.ShellMan.code(code)
+        else:
+            msg = Settings["Shell.nocommand"]
+            msg = msg.replace("{cmd}", cmd)
+            c.send(msg.encode())
 
 # eof

@@ -1,5 +1,5 @@
 # The Config!
-#
+# last commit: Mishqutin - master - 20.03.2019
 import os
 import sys
 import subprocess
@@ -28,7 +28,7 @@ ROOT_APPS_PATH = os.path.normpath( os.path.abspath(ROOT_PATH+"/apps") ) # /apps
 Settings = {}
 Settings["Running"] = True
 
-
+Settings["Shell.nocommand"] = "{cmd}: no such command."
 
 
 

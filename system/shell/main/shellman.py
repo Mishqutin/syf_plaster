@@ -1,4 +1,5 @@
 # Shell Manager!
+# last commit: Mishqutin - master - 20.03.2019
 from main.config import *
 from main.shellmanager.cmdproc import CmdProcessor
 

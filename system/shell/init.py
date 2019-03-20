@@ -1,5 +1,5 @@
 # Init script!
-
+# last commit: Mishqutin - master - 20.03.2019
 from main.config import *
 
 from main.shellman import ShellManager
@@ -25,14 +25,11 @@ for i in os.listdir(ROOT_APPS_PATH): # /apps
 
 
 
+
+
+
 print("Init Server Manager.")
 ServerMan = ServerManager(Shell.Cmd, Shell)
-
-
-
-
-
-
 
 # Server config.
 print("Server config")
