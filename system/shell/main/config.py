@@ -8,7 +8,7 @@ import inspect
 # Gotta switch to somethin' else soon, cos deprecated
 import _thread as thread
 
-from libs.os_shell import RunShell
+from main.libs.os_shell import RunShell
 from client.client import Client
 
 # THE ALMIGHTY VlaD-PUTIN!

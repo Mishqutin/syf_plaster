@@ -1,10 +1,12 @@
 # Init script!
 
 from main.config import *
+
 from main.shellman import ShellManager
 from main.serverman import ServerManager
 
-from libs.server import server
+from main.server import server
+
 
 print("Init Shell (Manager).")
 Shell = ShellManager()

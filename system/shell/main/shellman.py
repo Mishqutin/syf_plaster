@@ -1,6 +1,6 @@
 # Shell Manager!
 from main.config import *
-from libs.cmdproc import CmdProcessor
+from main.shellmanager.cmdproc import CmdProcessor
 
 
 
@@ -42,7 +42,7 @@ class ShellManager:
     def shellTestCommand(self, cmd, args, cData):
         print(" Shell Test Command")
         msg = "You have ran a Shell Test Command."
-        return {"msg": msg, "code": 1}
+        return {"msg": msg}
 
 
 
