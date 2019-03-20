@@ -32,10 +32,10 @@ class ServerManager:
             cmdSplit = string.split()
             cmd = cmdSplit[0]
 
-            if Shell.isCmd(cmd): # Cmd exists.
+            if self.Shell.isCmd(cmd): # Cmd exists.
                 # Run command.
                 cmdString = cData["string"]
-                ret = Shell.runString(cmdString, cData)
+                ret = self.Shell.runString(cmdString, cData)
 
                 if type(ret)==dict:
                     if "msg" in ret:
@@ -45,7 +45,7 @@ class ServerManager:
                     if "code" in ret:
                         # "code" - certain shell action.
                         code = ret["code"]
-                        ShellMan.code(code)
+                        self.ShellMan.code(code)
             else:
                 c.send((cmd + ": command not found.").encode())
 

@@ -38,7 +38,7 @@ class ShellManager:
 
 
 
-    def shellTestCommand(cmd, args, cData):
+    def shellTestCommand(self, cmd, args, cData):
         print(" Shell Test Command")
         msg = "You have ran a Shell Test Command."
         return {"msg": msg}

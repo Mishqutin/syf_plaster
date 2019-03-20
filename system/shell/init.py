@@ -25,11 +25,16 @@ LOG_PATH = SYS_PATH+"/shell/logs/server.log"
 print("Server start")
 Server = server.Server(SERVER_IP, SERVER_KEY, log=True, logfile=LOG_PATH)
 
+print("Init done!")
+print("Running")
+while Running:
+    try:
+        Server.accept(ServerMan.serverAcceptHandler, closeClient=False)
+    except KeyboardInterrupt:
+        break
+
 print("Server close")
 Server.close()
-
-
-
 
 print("eof")
 # eof
