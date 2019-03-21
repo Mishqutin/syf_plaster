@@ -51,14 +51,38 @@ Features:
 
 ### apps, data - directories structure
 
+`apps/<app_name>/` - Your app's static files - it's code, modules.  
+`data/<app_name>/` - Your app's dynamic files - e.g. config files, info generated about host, save games etc.
+
+
+#### app files and commands
+`apps/<app_name>/shell/` - Your app's files that'll be loaded to shell.  
+* Files other than `*.py` are ignored.  
+* Files are read and run in `init.py` global namespace.
+
+  See `system/shell/init.py` lines 10, 15-24,  
+  and also `system/shell/main/shellman.py` line 101 -> whole loadApp() function.
+
+* Variable `COMMANDS` of type `dict` is predefined for you in your code locals.
+
+  Use it to bind functions to new commands.  
+  Syntax is: `COMMANDS[<name>] = <function>`  
+  * `<name>` of type `str` is your commands name, that's how it'll be called. It's **lowercase!!**  
+  * `<function>` is the function going to be run when calling it's name.  
+
+* Arguments passed to your functions are: str `cmd`, list `args`, dict `cData`.
+
+  * `cmd` of type `str` is the name of your command. In case you'd like having one name for multiple funcs.  
+  * `args` of type `list` are the arguments passed for your command. Syntax of splitting args is same as in Unix command line.  
+  * `cData` of type `dict` is client's data. See below.
+
+* In code use `global <var_name>` to operate on global variable instead of local.
+
+
+**For a good example also look in `system/apps/` files! Do it now!**
+
+#### cData - client's cData
 TBD
-
-
-
-
-
-
-
 
 
 
