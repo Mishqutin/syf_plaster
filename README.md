@@ -7,7 +7,9 @@ Jajko Command Shell
 
 1. Split up, clean and whatever serverman.py.
 2. Update server module - whathefuck.
+3. Find a better way to store commands, and also a new syntax for 'em.
 
+   Currently every function's stored in RAM :P .
 
 
 -----
@@ -56,6 +58,9 @@ Features:
 
 
 #### app files and commands
+**Keep in mind, syntax described below is going to change in future.**
+
+
 `apps/<app_name>/shell/` - Your app's files that'll be loaded to shell.  
 * Files other than `*.py` are ignored.  
 * Files are read and run in `init.py` global namespace.
