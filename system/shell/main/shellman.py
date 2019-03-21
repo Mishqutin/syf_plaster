@@ -98,7 +98,7 @@ class ShellManager:
         Client.connect(ip, data)
 
 
-    def loadApp(self, path):         # Lol over 80 long docstr line what do? here V.
+    def loadApp(self, path, execGlobals=globals()):         # Lol over 80 long docstr line what do? here V.
         """\
         Load app /shell/*.py files and run them in global namespace.
         Return True if succeed, False if app path has no shell/ dir.
@@ -123,7 +123,7 @@ class ShellManager:
                         "APP_PATH": SYS_APPS_PATH+"/"+file,
                         "COMMANDS": {}
                     }
-                    exec(code, globals(), execLocals)
+                    exec(code, execGlobals, execLocals)
                     # Add commands.
                     Commands = execLocals["COMMANDS"]
                     for name, func in Commands.items():

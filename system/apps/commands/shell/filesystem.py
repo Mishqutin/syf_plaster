@@ -1,10 +1,10 @@
+# File operations.
+#
 
 
 
 
-
-
-
+# Info.
 def pwd(cmd, args, cData):
     """Print current working directory."""
     return {"msg": os.getcwd()}
@@ -18,18 +18,23 @@ def ls(cmd, args, cData):
         return {"msg": ', '.join(os.listdir())}
 COMMANDS["ls"] = ls
 
-def cd(cmd, args, cData):
-    """Usage: cd <path>
-    Change directory."""
-    try:
-        os.chdir(args[0])
-    except Exception as e:
-        return {"msg": str(e)}
-COMMANDS["cd"] = cd
+def stat(cmd, args, cData):
+    """Usage: stat <file>
+    Show file stats in some fucked up syntax."""
+    if len(args)==1:
+        file = args[0]
+        if os.path.isfile(file):
+            msg = str(os.stat(file))
+        else:
+            msg = "stat: File not found"
+        return {"msg": msg}
+COMMANDS["stat"] = stat
+
 
 def cat(cmd, args, cData):
     """Usage: cat <file>
-    Concatenate file to client's socket."""
+    Concatenate file to client's socket.
+    There's a limit of file size: 8192B"""
     if len(args)==1:
         file = args[0]
         if os.path.isfile(file):
@@ -44,14 +49,18 @@ def cat(cmd, args, cData):
         return {"msg": msg}
 COMMANDS["cat"] = cat
 
-def stat(cmd, args, cData):
-    """Usage: stat <file>
-    Show file stats in some fucked up syntax."""
-    if len(args)==1:
-        file = args[0]
-        if os.path.isfile(file):
-            msg = str(os.stat(file))
-        else:
-            msg = "stat: File not found"
-        return {"msg": msg}
-COMMANDS["stat"] = stat
+
+
+
+# Other.
+def cd(cmd, args, cData):
+    """Usage: cd <path>
+    Change directory."""
+    try:
+        os.chdir(args[0])
+    except Exception as e:
+        return {"msg": str(e)}
+COMMANDS["cd"] = cd
+
+
+# eof

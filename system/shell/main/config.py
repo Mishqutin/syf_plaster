@@ -30,7 +30,7 @@ Settings["Running"] = True
 
 Settings["Shell.nocommand"] = "{cmd}: no such command."
 
-
+Settings["Globals"] = {}
 
 
 

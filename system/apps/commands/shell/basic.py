@@ -8,14 +8,14 @@ def ping(cmd, args, cData):
     msg = "Pong"
     return {"msg": msg}
 COMMANDS["ping"] = ping
-COMMANDS["Ping"] = ping
+
 
 def pong(cmd, args, cData):
-    """Command doesn't exist."""
+    """pong: no such command"""
     msg = "Wait, that's illegal!"
     return {"msg": msg}
 COMMANDS["pong"] = pong
-COMMANDS["Pong"] = pong
+
 
 def echo(cmd, args, cData):
     """Usage: echo <message>
@@ -38,31 +38,3 @@ def localname(cmd, args, cData):
     Get your name."""
     return {"msg": cData["name"]}
 COMMANDS["localname"] = localname
-
-
-
-def help(cmd, args, cData):  # TODO: Clean up.
-    """Usage: help <command>"""
-    if len(args)==1:
-        command = args[0]
-        if Shell.isCmd(command):
-            doc = Shell.commands[command].__doc__
-            if doc!=None:
-                msg = "\n"+inspect.cleandoc(doc)
-            else:
-                msg = "help: Command does not provide documentation."
-        else:
-            msg = "help: No such command."
-    else:
-        msg = """\
-help: syntax error.
-Usage: help <command>"""
-    return {"msg": msg}
-COMMANDS["help"] = help
-
-
-def listcmd(cmd, args, cData):
-    """Show all available commands."""
-    msg = ', '.join(Shell.commands)
-    return {"msg": msg}
-COMMANDS["listcmd"] = listcmd

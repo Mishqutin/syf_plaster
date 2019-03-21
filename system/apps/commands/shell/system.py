@@ -5,15 +5,19 @@
 
 def reload(cmd, args, cData):
     """Reload all apps and commands."""
-    Shell.COMMANDS = {}
-    for i in os.listdir(SYS_APPS_PATH): # /system/apps.
-        if os.path.isdir(SYS_APPS_PATH+"/"+i):
-            ShellMan.loadApp(SYS_APPS_PATH+"/"+i)
 
-    for i in os.listdir(ROOT_APPS_PATH): # /apps.
+    print("Loading apps.")
+    print(" /system/apps")
+    for i in os.listdir(SYS_APPS_PATH): # /system/apps
+        if os.path.isdir(SYS_APPS_PATH+"/"+i):
+            Shell.loadApp(SYS_APPS_PATH+"/"+i, execGlobals=Settings["Globals"])
+    print(" /apps")
+    for i in os.listdir(ROOT_APPS_PATH): # /apps
         if os.path.isdir(ROOT_APPS_PATH+"/"+i):
-            ShellMan.loadApp(ROOT_APPS_PATH+"/"+i)
-    return {"msg": "System reloaded."}
+            Shell.loadApp(ROOT_APPS_PATH+"/"+i, execGlobals=Settings["Globals"])
+
+    msg = "Apps files reloaded."
+    return {"msg": msg}
 COMMANDS["reload"] = reload
 
 
