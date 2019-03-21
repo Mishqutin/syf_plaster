@@ -3,6 +3,16 @@ Jajko Command Shell
 
 ## SYF PLASTER ECHO PASTA ERROR!!
 
+#### TO-DO list
+
+1. Split up, clean and whatever serverman.py.
+2. Update server module - whathefuck.
+
+
+
+-----
+
+
 Features:
 * Lemonade
 * Apple juice
