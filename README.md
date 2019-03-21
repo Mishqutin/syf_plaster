@@ -9,6 +9,39 @@ Features:
 * Don't be racist guys, racism is a crime and crime is for black people.
 
 
+## Directory overview
+
+`system/` - System core files required to work.  
+`apps/` - Applications' files.  
+`data/` - Applications' data.  
+`home/` - User's home.  
+
+
+### system directory
+
+`system/apps/` - Core system's apps, providing basic operations.  
+`system/execlibs/` - Python modules safe to load via `exec` to global namespace.  
+`system/shell/` - Core program's files.
+
+
+`system/shell/client/` - Program used for input. Also imported by core. **Temporary location**.  
+`system/shell/logs/` - Logs.  
+`system/shell/main/` - Core modules.
+`system/shell/init.py` - Init script, ran first.  
+`system/shell/config.cfg` - Server config (IP etc.).
+
+
+`system/shell/main/libs/` - Modules used by apps' functions (commands).  
+`system/shell/main/server/` - Server module.  
+`system/shell/main/shellmanager/` - Shell manager's required modules.  
+`system/shell/main/config.py` - Config imported by other modules.  
+`system/shell/main/serverman.py` - Server manager module.  
+`system/shell/main/shellman.py` - Shell (manager) module.
+
+
+### apps, data - directories structure
+
+TBD
 
 
 
@@ -22,19 +55,7 @@ Features:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+----------
 
 
 ## Ignore everything down there
