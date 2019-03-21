@@ -1,6 +1,40 @@
-How application is fucked up:
+Jajko Command Shell
 ==============================
 
+## SYF PLASTER ECHO PASTA ERROR!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Ignore everything down there
 
 /apps - Applications' static files required to work.
 /apps/<app> - Your app's files.
@@ -45,8 +79,8 @@ To create a new command:
   string cmd - Your commands name. Useful if same function is used for several commands.
   list args - List of arguments (strings) passed.
   dict cData - Client data. I ain't gonna fuck with this here.
-  
+
 4.After you're done with yo func, store it in dict
   called COMMANDS, e.g. COMMANDS["name_of_mah_func"] = func
-  
+
 Yay you're done. Take a look also how's it done in /system/apps.
