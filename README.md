@@ -3,7 +3,10 @@ Jajko Command Shell
 
 ## SYF PLASTER ECHO PASTA ERROR!!
 
-
+Features:
+* Lemonade
+* Apple juice
+* Don't be racist guys, racism is a crime and crime is for black people.
 
 
 
