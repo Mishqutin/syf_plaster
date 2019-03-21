@@ -5,7 +5,7 @@ Jajko Command Shell
 
 #### TO-DO list
 
-1. Update server module - whathefuck.
+1. Update server module - pickle the data - whathefuck.
 2. Redesign command system to suit Unix-like stuff.
 
 
