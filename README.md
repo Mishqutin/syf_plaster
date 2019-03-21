@@ -5,11 +5,8 @@ Jajko Command Shell
 
 #### TO-DO list
 
-1. Split up, clean and whatever serverman.py.
-2. Update server module - whathefuck.
-3. Find a better way to store commands, and also a new syntax for 'em.
-
-   Currently every function's stored in RAM :P .
+1. Update server module - whathefuck.
+2. Redesign command system to suit Unix-like stuff.
 
 
 -----
