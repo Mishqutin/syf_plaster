@@ -4,7 +4,7 @@ from main.config import *
 
 
 
-class ServerManager:
+class ServerManager: # TODO: CLEAN UP THIS SHIT!!!!!!
     """Functions used to operate shell's Server.
     -serverAcceptHandler(c, cData)
     -serverAccept(c, cData)"""
