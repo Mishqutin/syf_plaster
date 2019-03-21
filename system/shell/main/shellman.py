@@ -1,5 +1,5 @@
 # Shell Manager!
-# last commit: Mishqutin - master - 20.03.2019
+# last commit: Mishqutin - master - 21.03.2019
 from main.config import *
 from main.shellmanager.cmdproc import CmdProcessor
 
@@ -53,16 +53,8 @@ class ShellManager:
 
 
 
-
-
-
-
-
-
-
-
     def code(self, n):
-        """Execute certain shell action.
+        """Execute certain action.
 
         None code(n)
         int n -- Code.
@@ -80,8 +72,8 @@ class ShellManager:
         if n==1: # 1 - shutdown
             self.shutdown()
         # Negative.
-        elif n==-1: # -1 - wrong dir error
-            self._fail_wrongPath()
+        elif n==-1: # -1 - currently nothing
+            pass
 
 
     def shutdown(self):
@@ -105,46 +97,44 @@ class ShellManager:
         ip = ("localhost", port)
         Client.connect(ip, data)
 
-    # vvvv Down there i dunno just mess vvvvv
 
     def loadApp(self, path):         # Lol over 80 long docstr line what do? here V.
         """\
-        Load application's <app>/shell/*.py files, execute them in global namespace
-        and add and/or override returned commands in dict COMMANDS to
-        Shell class (type: CommandProcessor).
-        Return True if succeed, False if path not found.
+        Load app /shell/*.py files and run them in global namespace.
+        Return True if succeed, False if app path has no shell/ dir.
 
         bool loadApp(path)
         str path -- Valid path to app.
                     Should be located in `/apps` or `/system/apps`
 
         """
-        if os.path.isdir(path):
-            if os.path.isdir(path+"/shell"): # If app has /shell dir.
-                appShellDir = path+"/shell"
+        if os.path.isdir(path+"/shell"): # If app has /shell dir.
+            appShellDir = path+"/shell"
 
-                for file in os.listdir(appShellDir):
-                    fileExt = file[-3:]
-                    if fileExt==".py": # Exec only .py files.
-                        f = open(appShellDir+"/"+file, 'r')
-                        code = f.read()
-                        f.close()
+            for file in os.listdir(appShellDir):
+                fileExt = file[-3:]
+                if fileExt==".py": # Exec only .py files.
+                    f = open(appShellDir+"/"+file, 'r')
+                    code = f.read()
+                    f.close()
 
-                        execLocals = {
-                            "ROOT_PATH": ROOT_PATH,
-                            "APP_PATH": SYS_APPS_PATH+"/"+file,
-                            "COMMANDS": {}
-                        }
-                        exec(code, globals(), execLocals)
-                        # Add commands.
-                        Commands = execLocals["COMMANDS"]
-                        for name, func in Commands.items():
-                            self.Cmd.addCmd(name, func)
+                    execLocals = {
+                        "ROOT_PATH": ROOT_PATH,
+                        "APP_PATH": SYS_APPS_PATH+"/"+file,
+                        "COMMANDS": {}
+                    }
+                    exec(code, globals(), execLocals)
+                    # Add commands.
+                    Commands = execLocals["COMMANDS"]
+                    for name, func in Commands.items():
+                        self.Cmd.addCmd(name, func)
 
             return True
         else:
             return False
 
+
+    # Uhhhh, I dunno
     def _fail_wrongPath(self):
         errorMessage = """\
 ==Error==
