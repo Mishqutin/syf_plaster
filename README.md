@@ -5,8 +5,8 @@ Jajko Command Shell
 
 #### TO-DO list
 
-1. Update server module - pickle the data - whathefuck.
-2. Redesign command system to suit Unix-like stuff.
+1. Update server module -  - whathefuck.
+2. Make command system faster and whatever.
 
 
 -----
@@ -55,33 +55,18 @@ Features:
 
 
 #### app files and commands
-**Keep in mind, syntax described below is going to change in future.**
+**Syntax described below may change in future.**
+
+so you put e.g. dick.py in /apps/shit/shell and inside write:
+```
+class command:
+    def main(path, args, cData):
+        return {"msg": 'long purple throbing dick'}
+```
+and yo have yo command then just write `dick` in console and yeah.
 
 
-`apps/<app_name>/shell/` - Your app's files that'll be loaded to shell.  
-* Files other than `*.py` are ignored.  
-* Files are read and run in `init.py` global namespace.
-
-  See `system/shell/init.py` lines 10, 15-24,  
-  and also `system/shell/main/shellman.py` line 101 -> whole loadApp() function.
-
-* Variable `COMMANDS` of type `dict` is predefined for you in your code locals.
-
-  Use it to bind functions to new commands.  
-  Syntax is: `COMMANDS[<name>] = <function>`  
-  * `<name>` of type `str` is your commands name, that's how it'll be called. It's **lowercase!!**  
-  * `<function>` is the function going to be run when calling it's name.  
-
-* Arguments passed to your functions are: str `cmd`, list `args`, dict `cData`.
-
-  * `cmd` of type `str` is the name of your command. In case you'd like having one name for multiple funcs.  
-  * `args` of type `list` are the arguments passed for your command. Syntax of splitting args is same as in Unix command line.  
-  * `cData` of type `dict` is client's data. See below.
-
-* In code use `global <var_name>` to operate on global variable instead of local.
-
-
-**For a good example also look in `system/apps/` files! Do it now!**
+**For a good example also look in `system/apps/`**
 
 #### cData - client's cData
 TBD
