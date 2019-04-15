@@ -23,6 +23,8 @@ SYS_SHELL_PATH = os.path.normpath( SYS_PATH+"/shell" )            # /system/shel
 ROOT_PATH = os.path.normpath( os.path.abspath(SYS_PATH+"/..") )         # /
 ROOT_APPS_PATH = os.path.normpath( os.path.abspath(ROOT_PATH+"/apps") ) # /apps
 
+HOME_PATH = os.path.normpath( os.path.abspath(os.getcwd()+"/../../home") ) # /home
+
 
 # dict Settings - settings/flags for program.
 Settings = {}

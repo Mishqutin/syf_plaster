@@ -13,15 +13,15 @@ print("Init Shell (Manager).")
 Shell = ShellManager()
 
 # Load apps, commands -> Shell CmdProcessor.
-print("Loading apps.")
-print(" /system/apps")
-for i in os.listdir(SYS_APPS_PATH): # /system/apps
-    if os.path.isdir(SYS_APPS_PATH+"/"+i):
-        Shell.loadApp(SYS_APPS_PATH+"/"+i, execGlobals=Settings["Globals"])
-print(" /apps")
-for i in os.listdir(ROOT_APPS_PATH): # /apps
-    if os.path.isdir(ROOT_APPS_PATH+"/"+i):
-        Shell.loadApp(ROOT_APPS_PATH+"/"+i, execGlobals=Settings["Globals"])
+# print("Loading apps.")
+# print(" /system/apps")
+# for i in os.listdir(SYS_APPS_PATH): # /system/apps
+#     if os.path.isdir(SYS_APPS_PATH+"/"+i):
+#         Shell.loadApp(SYS_APPS_PATH+"/"+i, execGlobals=Settings["Globals"])
+# print(" /apps")
+# for i in os.listdir(ROOT_APPS_PATH): # /apps
+#     if os.path.isdir(ROOT_APPS_PATH+"/"+i):
+#         Shell.loadApp(ROOT_APPS_PATH+"/"+i, execGlobals=Settings["Globals"])
 
 
 
@@ -45,7 +45,10 @@ LOG_PATH = SYS_PATH+"/shell/logs/server.log"
 print("Server start")
 Server = server.Server(SERVER_IP, SERVER_KEY, log=True, logfile=LOG_PATH)
 
+os.chdir(HOME_PATH)
+
 print("Init done!")
+print(os.getcwd())
 print("Running")
 
 while Settings["Running"]:

@@ -4,7 +4,7 @@ from main.config import *
 
 
 
-class ServerManager: # TODO: CLEAN UP THIS SHIT!!!!!!
+class ServerManager:
     """Functions used to operate shell's Server.
     -serverAcceptHandler(c, cData)
     -serverAccept(c, cData)"""
@@ -46,6 +46,8 @@ class ServerManager: # TODO: CLEAN UP THIS SHIT!!!!!!
         splitStr = string.split()
         cmd = splitStr[0]
 
+        # TODO: isCmd and runString both loop thru directories to find the command,
+        #       wich is time-consuming - reduce shit. Look also at cmdproc.py.
         if self.Shell.isCmd(cmd): # Exists.
             # Run command.
             ret = self.Shell.runString(string, cData)
