@@ -25,6 +25,11 @@ ROOT_APPS_PATH = os.path.normpath( os.path.abspath(ROOT_PATH+"/apps") ) # /apps
 
 HOME_PATH = os.path.normpath( os.path.abspath(os.getcwd()+"/../../home") ) # /home
 
+if os.name == "nt": # Repair functionality broken by NT system
+    # not needed already ./bin/nigga works
+    pass # os.environ["pathext"] += "; ;" # ;-;
+
+
 
 # dict Settings - settings/flags for program.
 Settings = {}

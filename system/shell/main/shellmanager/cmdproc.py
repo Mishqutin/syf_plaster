@@ -87,6 +87,33 @@ class CmdProcessor:
     def readPath(self):
         return self.readVar("path").split(":")
 
+
+
+
+    def runFile(self, path, args):
+        args.insert(0, path)
+        try:
+            res = subprocess.run(args, shell=False, check=True, stdout=subprocess.PIPE).stdout.decode("UTF-8")
+            if os.name == "nt":
+                res = res.replace("\r", "")
+        except Exception as e:
+            res = str(e)
+            return {"msg": res}
+
+        if res[0]=="{":
+            print(res)
+            outList = res.split("}\n")
+            print(outList)
+            data = eval( outList[0]+"}\n" )
+            msg = outList[1]
+            return {"msg": msg, **data}
+        else:
+            return {"msg": res}
+
+
+
+
+
     def findCmd_stage1(self, name):
         for app in os.listdir(SYS_APPS_PATH): # /system/apps
             if os.path.isdir(SYS_APPS_PATH+"/"+app+"/shell"): # If app has /shell dir.

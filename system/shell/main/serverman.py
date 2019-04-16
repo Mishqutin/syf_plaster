@@ -49,7 +49,12 @@ class ServerManager:
 
         if path != "": # Exists.
             # Run command.
-            ret = self.Shell.run(path, args, cData)
+            fname, ext = os.path.splitext(path)
+
+            if ext == ".py":
+                ret = self.Shell.run(path, args, cData)
+            else:
+                ret = self.Shell.runFile(path, args)
 
             self.processReturn(c, cData, ret)
 
