@@ -9,6 +9,7 @@ import inspect
 import _thread as thread
 
 from main.libs.os_shell import RunShell
+from main.libs.colors import Colors
 from client.client import Client
 
 # THE ALMIGHTY VlaD-PUTIN!
