@@ -1,5 +1,5 @@
 # Init script!
-# last commit: Mishqutin - master - 21.03.2019
+# last commit: Mishqutin - master - i dunno
 from main.config import *
 
 from main.shellman import ShellManager

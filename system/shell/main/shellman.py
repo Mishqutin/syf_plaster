@@ -1,5 +1,5 @@
 # Shell Manager!
-# last commit: Mishqutin - master - 21.03.2019
+# last commit: Mishqutin - master - who cares
 from main.config import *
 from main.shellmanager.cmdproc import CmdProcessor
 
@@ -20,8 +20,8 @@ class ShellManager:
         print("[i]shell: command processor")
         self.Cmd = CmdProcessor()
         # Binds.
-        run = self.Cmd.run
-        runString = self.Cmd.runString
+        #run = self.Cmd.run
+        #runString = self.Cmd.runString
 
         if includeTestCmd:
             print("[i]shell: including test cmds")

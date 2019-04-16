@@ -1,5 +1,5 @@
 # Server manager!
-# last commit: Mishqutin - master - 21.03.2019
+# last commit: Mishqutin - master - whatever
 from main.config import *
 
 
@@ -43,14 +43,13 @@ class ServerManager:
         """Process command."""
         string = cData["string"]
 
-        splitStr = string.split()
-        cmd = splitStr[0]
+        cmd, args = self.Shell.parseString(string)
 
-        # TODO: isCmd and runString both loop thru directories to find the command,
-        #       wich is time-consuming - reduce shit. Look also at cmdproc.py.
-        if self.Shell.isCmd(cmd): # Exists.
+        path = self.Shell.findCmd(cmd)
+
+        if path != "": # Exists.
             # Run command.
-            ret = self.Shell.runString(string, cData)
+            ret = self.Shell.run(path, args, cData)
 
             self.processReturn(c, cData, ret)
 
