@@ -1,5 +1,6 @@
 from main.config import *
 from shlex import split as shlex_split
+import re
 
 
 class CmdProcessor:
@@ -88,7 +89,9 @@ class CmdProcessor:
         return self.readVar("path").split(":")
 
 
-
+    def splitkeep(all_lines, d):
+        for line in all_lines:
+            s =  [e+d for e in line.split(d) if e]
 
     def runFile(self, path, args):
         args.insert(0, path)
@@ -100,13 +103,20 @@ class CmdProcessor:
             res = str(e)
             return {"msg": res}
 
-        if res[0]=="{":
-            print(res)
-            outList = res.split("}\n")
-            print(outList)
-            data = eval( outList[0]+"}\n" )
-            msg = outList[1]
-            return {"msg": msg, **data}
+        if True:
+            out = re.findall(".*?\n", res)
+            #print(repr(out))
+            msg = ""
+            for i in out:
+                #print(repr(i))
+                if i[0]=="\a" and i[-2:]=="\a\n":
+                    #print("-e")
+                    exec(i[1:-2], globals(), {})
+                else:
+                    #print("-msg")
+                    msg += i
+                
+            return {"msg": msg}
         else:
             return {"msg": res}
 
