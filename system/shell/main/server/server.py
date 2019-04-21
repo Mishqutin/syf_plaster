@@ -9,13 +9,15 @@ import ast
 
 class Server:
     
-    def __init__(self, IP, key, log=False, logfile="./server_log"):
+    def __init__(self, IP, key="", log=False, logfile="./server_log"):
         """\
 tuple IP: (str address, int port) - Server's address.
 str key - Server's key/password.
 bool log - Enable logging to file? default: False
 str logfile - Path to file where log will be written. default: "./server_log" """
         self.IP  = IP
+
+        self.UseKey = True
         self.KEY = key
         
         self.Log = log
@@ -107,7 +109,7 @@ If an error occured return string and client's socket:
             return "data_missing", c, funcReturn
         
         # Data with invalid key.
-        if not cData["key"] == self.KEY:
+        if self.UseKey and not cData["key"] == self.KEY:
             c.close()
             self.log("[Error] Received invalid key.")
             if func: funcReturn = func(c, "wrong_key", *funcArgs)

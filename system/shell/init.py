@@ -9,6 +9,13 @@ from main.server import server
 
 Settings["Globals"] = globals()
 
+print("Directory check...")
+if not os.path.isdir(SYS_SHELL_PATH+"/logs"):
+    print(" system/shell/logs/ not found.")
+    print(" Creating system/shell/logs/...")
+    os.mkdir(SYS_SHELL_PATH+"/logs")
+
+
 print("Init Shell (Manager).")
 Shell = ShellManager()
 
