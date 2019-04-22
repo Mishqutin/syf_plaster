@@ -36,11 +36,11 @@ class CmdProcessor:
 
         execGlobals = globals()
         execLocals = {
-            "command": None
+            "main": None
         }
         exec(code, execGlobals, execLocals)
 
-        func = execLocals["command"].main
+        func = execLocals["main"]
 
         return func(path, args, *argsv)
 
