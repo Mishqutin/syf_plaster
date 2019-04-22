@@ -62,9 +62,8 @@ Features:
 
 so you put e.g. dick.py in /bin and inside write:
 ```
-class command:
-    def main(path, args, cData):
-        return {"msg": 'daddys long purple throbing dick'}
+def main(path, args, cData):
+    return {"msg": 'daddys long purple throbbing dick'}
 ```
 and yo have yo command then just write `dick` in console and yeah.
 
