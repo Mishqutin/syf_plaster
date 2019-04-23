@@ -9,7 +9,7 @@ Jajko Command Shell
 
 #### Holes
 
-1. cmdproc.py line 49, function parseString:
+1. cmdproc.py line 49, function parseString:  
    Raises ValueError: no escaped character  
    when user sends "\".
 
