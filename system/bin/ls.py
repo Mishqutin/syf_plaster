@@ -13,7 +13,7 @@ def main(path, args, cData):
             app = Colors.light_blue+i+Colors.reset
         else:
             app = i
-            s+= app+"  "
+        s+= app+"  "
 
     return {"msg": s}
 

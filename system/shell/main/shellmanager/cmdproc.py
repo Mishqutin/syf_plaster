@@ -1,4 +1,5 @@
 from main.config import *
+from main.shellmanager import filerunner
 from shlex import split as shlex_split
 import re
 
@@ -96,7 +97,7 @@ class CmdProcessor:
     def runFile(self, path, args):
         args.insert(0, path)
         try:
-            res = subprocess.run(args, shell=False, check=True, stdout=subprocess.PIPE).stdout.decode("UTF-8")
+            res = filerunner.runFile(args)
             if os.name == "nt":
                 res = res.replace("\r", "")
         except Exception as e:
