@@ -4,7 +4,7 @@ import subprocess
 import os
 
 # Diffrent file exec code:
-# "#@|/path/to/file"
+shebang = "#@#" # "@#" - at 'root' of this program.
 
 
 def runFile(args):
@@ -21,7 +21,7 @@ def runFile(args):
             f = open(filename, 'r')
             cfgline = f.readline().replace("\n", "") # Strip trailing \n
             f.close()
-        except:
+        except: # Couldn't read - it's binary.
             return runFileDirect(args)
         
         
@@ -36,36 +36,32 @@ def runFile(args):
         else:
             res = runFileDirect(args)
 
-        print(res)
-        # TECHNO PLASTER! - dont ask me whaaahaha
         return res
+    
     else:
         return "No such file."
 
+
 def runFileDirect(args):
     res = subprocess.run(' '.join(args), shell=True, check=True, stdout=subprocess.PIPE).stdout.decode("UTF-8")
-    print(1)
     return res
 
-def runFileCustom(args, filename, cfgline):
-    
+def runFileCustom(args, filename, cfgline):    
     if cfgline[0:2] == "#!":
         startwith = cfgline[2:]
-    elif cfgline[0:3] == "#@|":
+    elif cfgline[0:3] == "#@#":
         startwith = ROOT_PATH+cfgline[3:]
     else:
         startwith = None
-        raise ValueError("File's 1st line doesn't contain any of the following ('#!', '#@|')")
-    print("startwith")
-    print(startwith)
+        raise ValueError("File's 1st line doesn't contain any of the following ('#!', '{}')".format(shebang))
+
     finalArgs = [startwith, *args]
-    print(finalArgs)
     res = runFileDirect(finalArgs)
     
     return res
 
 def checkHowToRun(args, filename, cfgline):
-    if cfgline[0:3] == "#@|":
+    if cfgline[0:3] == "#@#":
         # If file has to be run with program from ROOT_PATH/*
         return 1
     elif os.name == "nt" and cfgline[0:2] == "#!":

@@ -5,9 +5,13 @@ Jajko Command Shell
 
 #### TO-DO list
 
-1. Fix up and whatever filerunner.py module.
-2. Add something like user system also whatever.
+1. Add something like user system also whatever.
 
+#### Holes
+
+1. cmdproc.py line 49, function parseString:
+   Raises ValueError: no escaped character  
+   when user sends "\".
 
 -----
 
