@@ -5,9 +5,8 @@ Jajko Command Shell
 
 #### TO-DO list
 
-1. Update server module -  - whathefuck.
-2. Rework .py command files syntax.
-3. Add executable support.
+1. Fix up and whatever filerunner.py module.
+2. Add something like user system also whatever.
 
 
 -----
@@ -83,7 +82,7 @@ TBD
 
 ## Ignore everything down there
 
-I like tomatoes I like banannas  
-i eat tooth paste not to mention tooth pasta.  
-i touch my lil sis at night  
-and i eat dust.
+I EAT DUST.  
+I EAT DUST.
+JUST LIKE I ATE MY BANANAS.
+I EAT DUST.
