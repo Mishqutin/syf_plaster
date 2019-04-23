@@ -11,7 +11,7 @@ Jajko Command Shell
 
 1. cmdproc.py line 49, function parseString:  
    Raises ValueError: no escaped character  
-   when user sends "\".
+   when user sends "\\".
 
 -----
 
