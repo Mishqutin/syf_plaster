@@ -37,6 +37,7 @@ Settings = {}
 Settings["Running"] = True
 
 Settings["Shell.nocommand"] = "{cmd}: no such command."
+Settings["Shell.x-perm-denied"] = "Permission denied for execution" # unused
 
 Settings["Globals"] = {}
 

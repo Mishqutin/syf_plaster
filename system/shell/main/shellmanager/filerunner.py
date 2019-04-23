@@ -6,26 +6,78 @@ import os
 # Diffrent file exec code:
 # "#@|/path/to/file"
 
-def runFile(param):
-    """param - list."""
 
-    fname = param[0]
-    if os.path.isfile(fname):
-        f = open(fname)
-        string = f.readline()
-        f.close()
+def runFile(args):
+    """args - list."""
 
-        if string[0:3] == "#@|":
-            res = runFileOffset(param, string)
-            return res
-
-    res = subprocess.run(param, shell=False, check=True, stdout=subprocess.PIPE).stdout.decode("UTF-8")
-
-    return res
-
-
-def runFileOffset(args, line):
-    path = ROOT_PATH+line[3:-1]
     
-    res = subprocess.run([path, *args], shell=False, check=True, stdout=subprocess.PIPE).stdout.decode("UTF-8")
+    filename = args[0]
+    if filename[0] == ".":
+        filename = os.getcwd() + filename[1:]
+        args[0] = filename
+        
+    if os.path.isfile(filename):
+        try:
+            f = open(filename, 'r')
+            cfgline = f.readline().replace("\n", "") # Strip trailing \n
+            f.close()
+        except:
+            return runFileDirect(args)
+        
+        
+        
+        if False: # Skip permission check 'cos tbd.
+            pass # check permissions.
+
+        runType = checkHowToRun(args, filename, cfgline) #
+
+        if runType == 1:
+            res = runFileCustom(args, filename, cfgline)
+        else:
+            res = runFileDirect(args)
+
+        print(res)
+        # TECHNO PLASTER! - dont ask me whaaahaha
+        return res
+    else:
+        return "No such file."
+
+def runFileDirect(args):
+    res = subprocess.run(' '.join(args), shell=True, check=True, stdout=subprocess.PIPE).stdout.decode("UTF-8")
+    print(1)
     return res
+
+def runFileCustom(args, filename, cfgline):
+    
+    if cfgline[0:2] == "#!":
+        startwith = cfgline[2:]
+    elif cfgline[0:3] == "#@|":
+        startwith = ROOT_PATH+cfgline[3:]
+    else:
+        startwith = None
+        raise ValueError("File's 1st line doesn't contain any of the following ('#!', '#@|')")
+    print("startwith")
+    print(startwith)
+    finalArgs = [startwith, *args]
+    print(finalArgs)
+    res = runFileDirect(finalArgs)
+    
+    return res
+
+def checkHowToRun(args, filename, cfgline):
+    if cfgline[0:3] == "#@|":
+        # If file has to be run with program from ROOT_PATH/*
+        return 1
+    elif os.name == "nt" and cfgline[0:2] == "#!":
+        # If running on MS-DOS and file has to be run with program from /*
+        return 1
+    else:
+        # If file has '#!' and running on GNU/Linux,
+        # or doesn't have any start parameter and running on MS-DOS.
+        return 0
+
+
+# A random thought:
+# Niggas makin' smartphones and systems for 'em could make some models
+# with Debian or whatever distro and that would make my life easier
+# 10/10 would loose money on such masterpieces.
