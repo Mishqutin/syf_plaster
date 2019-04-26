@@ -9,12 +9,6 @@ from main.server import server
 
 Settings["Globals"] = globals()
 
-print("Directory check...")
-if not os.path.isdir(SYS_SHELL_PATH+"/logs"):
-    print(" system/shell/logs/ not found.")
-    print(" Creating system/shell/logs/...")
-    os.mkdir(SYS_SHELL_PATH+"/logs")
-
 
 print("Init Shell (Manager).")
 Shell = ShellManager()
@@ -25,12 +19,12 @@ ServerMan = ServerManager(Shell.Cmd, Shell)
 
 # Server config.
 print("Server config")
-SERVER_KEY = Shell.config["Server.Key"]
+SERVER_KEY     = Shell.config["Server.Key"]
 SERVER_ADDRESS = Shell.config["Server.Address"]
 SERVER_PORT    = Shell.config["Server.Port"]
 SERVER_IP = (SERVER_ADDRESS, SERVER_PORT)
 # Log path's static.
-LOG_PATH = SYS_PATH+"/shell/logs/server.log"
+LOG_PATH = SYS_PATH+"/var/server_logs/server.log"
 
 # Init shell's server.
 print("Server start")
