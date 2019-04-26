@@ -19,21 +19,21 @@ Jajko Command Shell
 Features:
 * Lemonade
 * Apple juice
-* Don't be racist guys, racism is a crime and crime is for black people.
+* Don't be racist guys, racism is crime and crime is for black people.
 
 
 ## Directory overview
 
-`system/` - System core files required to work.  
-`bin/` - Executable files (currently `.py` are considered such).  
-`apps/` - Applications' files.  
-`data/` - Applications' data.  
-`home/` - User's home.  
+`bin/` - executables.  
+`opt/` - static program files.
+`lib/` - libraries.
+`var/` - dynamic program files.
 
 
-### system directory
 
-`system/apps/` - Core system's apps, providing basic operations.  
+
+
+# System
 `system/bin/` - System's essential executable files (currently `.py` are considered such).  
 `system/execlibs/` - Python modules safe to load via `exec` to global namespace.  
 `system/shell/` - Core program's files.
@@ -54,10 +54,6 @@ Features:
 `system/shell/main/shellman.py` - Shell (manager) module.
 
 
-### apps, data - directories structure
-
-`apps/<app_name>/` - Your app's static files - it's code, modules.  
-`data/<app_name>/` - Your app's dynamic files - e.g. config files, info generated about host, save games etc.
 
 
 #### app files and commands
