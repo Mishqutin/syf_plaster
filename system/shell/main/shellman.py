@@ -10,12 +10,8 @@ class ShellManager:
     """Shell Manager"""
 
     # INIT STUFF ========
-    def __init__(self, includeTestCmd=False):
-        # Config.
-        print("[i]shell: config...")
-        self.config = {}
-        self.loadConfig()
-
+    def __init__(self):
+        
         # Command Processor.
         print("[i]shell: command processor")
         self.Cmd = CmdProcessor()
@@ -23,29 +19,7 @@ class ShellManager:
         #run = self.Cmd.run
         #runString = self.Cmd.runString
 
-        if includeTestCmd:
-            print("[i]shell: including test cmds")
-            self.Cmd.addCmd("test", self.shellTestCommand)
-
-
-    # Load config file.
-    def loadConfig(self):
-        """Load configuration file to self.config."""
-        f = open(SYS_PATH+"/etc/config.cfg", 'r')
-        configStr = f.read()
-        f.close()
-
-        self.config = eval(configStr)
-
-
-
-    # Predefined test command, see above - __init__.
-    def shellTestCommand(self, cmd, args, cData):
-        print(" Shell Test Command")
-        msg = "You have ran a Shell Test Command."
-        return {"msg": msg}
-
-
+        
 
 
     # INIT STUFF END ====
@@ -64,7 +38,7 @@ class ShellManager:
         Codes, positive:
          1 - Shutdown system.
         Codes, negative:
-         -1 - Wrong directory structure error.
+         -1 - wtf.
         """
         if type(n)!=int: raise TypeError("code argument must be of int type.")
 
@@ -73,7 +47,7 @@ class ShellManager:
             self.shutdown()
         # Negative.
         elif n==-1: # -1 - currently nothing
-            pass
+            print("Jebać psy!")
 
 
     def shutdown(self):
@@ -97,58 +71,6 @@ class ShellManager:
         ip = ("localhost", port)
         Client.connect(ip, data)
 
-
-    def loadApp(self, path, execGlobals=globals()):
-        """\
-        Load app /shell/*.py files and run them in global namespace.
-        Return True if succeed, False if app path has no shell/ dir.
-
-        bool loadApp(path)
-        str path -- Valid path to app.
-                    Should be located in `/apps` or `/system/apps`
-
-        """
-        if os.path.isdir(path+"/shell"): # If app has /shell dir.
-            appShellDir = path+"/shell"
-
-            for file in os.listdir(appShellDir):
-                fileExt = file[-3:]
-                if fileExt==".py": # Exec only .py files.
-                    f = open(appShellDir+"/"+file, 'r')
-                    code = f.read()
-                    f.close()
-
-                    execLocals = {
-                        "ROOT_PATH": ROOT_PATH,
-                        "APP_PATH": SYS_APPS_PATH+"/"+file,
-                        "COMMANDS": {}
-                    }
-                    exec(code, execGlobals, execLocals)
-                    # Add commands.
-                    Commands = execLocals["COMMANDS"]
-                    for name, func in Commands.items():
-                        self.Cmd.addCmd(name, func)
-
-            return True
-        else:
-            return False
-
-
-    # Uhhhh, I dunno
-    def _fail_wrongPath(self):
-        errorMessage = """\
-==Error==
->Wrong or renamed directory!
-Please run `python shell.py` directly from it's directory.
-If it doesn't help, it means that the file is in wrong directory
- or dir has been renamed.
-Proper path to file should be:
- `system/shell/shell.py`"""
-
-        print(errorMessage)
-        input("-Press [Return] to dismiss-")
-        # Exit with error.
-        sys.exit(1)
 
 
 

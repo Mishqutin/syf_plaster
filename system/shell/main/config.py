@@ -17,14 +17,17 @@ from client.client import Client
 
 
 
+
 SYS_PATH = os.path.normpath( os.path.abspath(os.getcwd()+"/..") ) # /system
-SYS_APPS_PATH = os.path.normpath( SYS_PATH+"/apps" )              # /system/apps
+
 SYS_SHELL_PATH = os.path.normpath( SYS_PATH+"/shell" )            # /system/shell
 
 ROOT_PATH = os.path.normpath( os.path.abspath(SYS_PATH+"/..") )         # /
-ROOT_APPS_PATH = os.path.normpath( os.path.abspath(ROOT_PATH+"/apps") ) # /apps
+PATH = ROOT_PATH
 
 HOME_PATH = os.path.normpath( os.path.abspath(os.getcwd()+"/../../home") ) # /home
+
+
 
 if os.name == "nt": # Repair functionality broken by NT system
     # not needed already ./bin/nigga works
@@ -35,6 +38,13 @@ if os.name == "nt": # Repair functionality broken by NT system
 # dict Settings - settings/flags for program.
 Settings = {}
 Settings["Running"] = True
+
+Settings["config_file"] = PATH+"/system/etc/config.cfg"
+f = open(Settings["config_file"], 'r')
+Settings["config"] = eval(f.read())
+f.close()
+
+Settings["log_file"] = PATH+"/system/var/server_logs/server.log"
 
 Settings["Shell.nocommand"] = "{cmd}: no such command."
 Settings["Shell.x-perm-denied"] = "Permission denied for execution" # unused

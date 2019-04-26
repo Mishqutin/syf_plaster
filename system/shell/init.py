@@ -19,12 +19,12 @@ ServerMan = ServerManager(Shell.Cmd, Shell)
 
 # Server config.
 print("Server config")
-SERVER_KEY     = Shell.config["Server.Key"]
-SERVER_ADDRESS = Shell.config["Server.Address"]
-SERVER_PORT    = Shell.config["Server.Port"]
+SERVER_KEY     = Settings["config"]["Server.Key"]
+SERVER_ADDRESS = Settings["config"]["Server.Address"]
+SERVER_PORT    = Settings["config"]["Server.Port"]
 SERVER_IP = (SERVER_ADDRESS, SERVER_PORT)
 # Log path's static.
-LOG_PATH = SYS_PATH+"/var/server_logs/server.log"
+LOG_PATH = Settings["log_file"]
 
 # Init shell's server.
 print("Server start")
@@ -33,7 +33,8 @@ Server = server.Server(SERVER_IP, SERVER_KEY, log=True, logfile=LOG_PATH)
 os.chdir(HOME_PATH)
 
 print("Init done!")
-print(os.getcwd())
+print("Log file @ "+LOG_PATH)
+print("Currently @ "+os.getcwd())
 print("Running")
 
 while Settings["Running"]:
