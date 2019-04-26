@@ -29,25 +29,19 @@ Features:
 `lib/` - libraries.
 `var/` - dynamic program files.
 `etc/` - configurations.
+`tmp/` - temporary files.
+`system/` - files required for system to start and work properly.  
 
 
-
-
-
-# System
-`system/bin/` - System's essential executable files (currently `.py` are considered such).  
-`system/execlibs/` - Python modules safe to load via `exec` to global namespace.  
-`system/shell/` - Core program's files.
-
+`system/shell/` - Core program's files.  
 
 `system/shell/client/` - Program used for input. Also imported by core. **Temporary location**.  
-`system/shell/logs/` - Logs.  
 `system/shell/main/` - Core modules.
 `system/shell/init.py` - Init script, ran first.  
-`system/shell/config.cfg` - Server config (IP etc.).
+`system/etc/somewherehere/config.cfg` - Server config (IP etc.).
 
 
-`system/shell/main/libs/` - Modules used by apps' functions (commands).  
+`system/shell/main/libs/` - some modules.  
 `system/shell/main/server/` - Server module.  
 `system/shell/main/shellmanager/` - Shell manager's required modules.  
 `system/shell/main/config.py` - Config imported by other modules.  
@@ -57,7 +51,7 @@ Features:
 
 
 
-#### app files and commands
+#### random heading
 **Syntax described below may change in future.**
 
 so you put e.g. dick.py in /bin and inside write:
