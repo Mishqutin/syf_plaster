@@ -28,6 +28,7 @@ Features:
 `opt/` - static program files.
 `lib/` - libraries.
 `var/` - dynamic program files.
+`etc/` - configurations.
 
 
 

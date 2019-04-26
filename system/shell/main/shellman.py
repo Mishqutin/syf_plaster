@@ -30,8 +30,8 @@ class ShellManager:
 
     # Load config file.
     def loadConfig(self):
-        """Load configuration file 'system/config.cfg' to self.config."""
-        f = open(SYS_PATH+"/config.cfg", 'r')
+        """Load configuration file to self.config."""
+        f = open(SYS_PATH+"/etc/config.cfg", 'r')
         configStr = f.read()
         f.close()
 
