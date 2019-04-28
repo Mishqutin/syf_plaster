@@ -1,7 +1,7 @@
 # Shell Manager!
 # last commit: Mishqutin - master - who cares
-from main.config import *
-from main.shellmanager.cmdproc import CmdProcessor
+from lib.config import *
+from lib.shellmanager.cmdproc import CmdProcessor
 
 
 

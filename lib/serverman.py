@@ -1,6 +1,6 @@
 # Server manager!
 # last commit: Mishqutin - master - whatever
-from main.config import *
+from lib.config import *
 
 
 

@@ -8,9 +8,9 @@ import inspect
 # Gotta switch to somethin' else soon, cos deprecated
 import _thread as thread
 
-from main.libs.os_shell import RunShell
-from main.libs.colors import Colors
-from client.client import Client
+from lib.python.os_shell import RunShell
+from lib.python.colors import Colors
+from lib.python.client import Client
 
 # THE ALMIGHTY VlaD-PUTIN!
 
@@ -18,14 +18,8 @@ from client.client import Client
 
 
 
-SYS_PATH = os.path.normpath( os.path.abspath(os.getcwd()+"/..") ) # /system
-
-SYS_SHELL_PATH = os.path.normpath( SYS_PATH+"/shell" )            # /system/shell
-
-ROOT_PATH = os.path.normpath( os.path.abspath(SYS_PATH+"/..") )         # /
+ROOT_PATH = os.getcwd() # /
 PATH = ROOT_PATH
-
-HOME_PATH = os.path.normpath( os.path.abspath(os.getcwd()+"/../../home") ) # /home
 
 
 
@@ -39,12 +33,12 @@ if os.name == "nt": # Repair functionality broken by NT system
 Settings = {}
 Settings["Running"] = True
 
-Settings["config_file"] = PATH+"/system/etc/config.cfg"
+Settings["config_file"] = PATH+"/etc/config.cfg"
 f = open(Settings["config_file"], 'r')
 Settings["config"] = eval(f.read())
 f.close()
 
-Settings["log_file"] = PATH+"/system/var/server_logs/server.log"
+Settings["log_file"] = PATH+"/var/server_logs/server.log"
 
 Settings["Shell.nocommand"] = "{cmd}: no such command."
 Settings["Shell.x-perm-denied"] = "Permission denied for execution" # unused

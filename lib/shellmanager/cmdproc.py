@@ -1,5 +1,5 @@
-from main.config import *
-from main.shellmanager import filerunner
+from lib.config import *
+from lib.shellmanager import filerunner
 from shlex import split as shlex_split
 import re
 
@@ -10,7 +10,7 @@ class CmdProcessor:
         self.variables = {}
 
         bin1 = ROOT_PATH+"/bin"
-        bin2 = SYS_PATH+"/bin"
+        bin2 = ROOT_PATH+"/usr/bin"
         self.setVar("path",
             bin1+":"+bin2
         )
@@ -121,25 +121,3 @@ class CmdProcessor:
         else:
             return {"msg": res}
 
-
-
-
-
-    def findCmd_stage1(self, name):
-        for app in os.listdir(SYS_APPS_PATH): # /system/apps
-            if os.path.isdir(SYS_APPS_PATH+"/"+app+"/shell"): # If app has /shell dir.
-                appShellDir = SYS_APPS_PATH+"/"+app+"/shell"
-                if name+'.py' in os.listdir(appShellDir):
-                    path = appShellDir+"/"+name+'.py'
-                    return path
-
-    def findCmd_stage2(self, name):
-        for app in os.listdir(ROOT_APPS_PATH): # /apps
-            if os.path.isdir(ROOT_APPS_PATH+"/"+app+"/shell"): # If app has /shell dir.
-                appShellDir = ROOT_APPS_PATH+"/"+app+"/shell"
-                if name+'.py' in os.listdir(appShellDir):
-                    path = appShellDir+"/"+name+'.py'
-                    return path
-
-    def findCmd_stage3(self, name):
-        pass

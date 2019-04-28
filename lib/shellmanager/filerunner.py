@@ -1,5 +1,5 @@
 # Run files multi-platform.
-from main.config import *
+from lib.config import *
 import subprocess
 import os
 

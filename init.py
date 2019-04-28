@@ -1,11 +1,11 @@
 # Init script!
 # last commit: Mishqutin - master - i dunno
-from main.config import *
+from lib.config import *
 
-from main.shellman import ShellManager
-from main.serverman import ServerManager
+from lib.shellman import ShellManager
+from lib.serverman import ServerManager
 
-from main.server import server
+from lib.jserver import server
 
 Settings["Globals"] = globals()
 
@@ -30,7 +30,7 @@ LOG_PATH = Settings["log_file"]
 print("Server start")
 Server = server.Server(SERVER_IP, SERVER_KEY, log=True, logfile=LOG_PATH)
 
-os.chdir(HOME_PATH)
+os.chdir(ROOT_PATH+"/home")
 
 print("Init done!")
 print("Log file @ "+LOG_PATH)
