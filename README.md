@@ -46,10 +46,6 @@ and yo have yo command then just write `dick` in console and yeah.
 
 **For a good example, go die.**
 
-#### cData - client's cData
-TBD
-
-
 
 
 
@@ -60,6 +56,13 @@ TBD
 ## Ignore everything down there
 
 I EAT DUST.  
-I EAT DUST.
-JUST LIKE I ATE MY BANANAS.
-I EAT DUST.
+I EAT DUST.  
+JUST LIKE I ATE MY BANANAS.  
+I EAT DUST.  
+ONLY TO FULFIL MY GREATEST DESIRES.  
+I EAT DUST.  
+I EAT DUST.  
+ONLY THE WISEST WILL ARISE.  
+WE ARE DOOMED IN OUR LIGHTS.
+I AM FUCKED UP I JUST MADE UP ALL THIS shit up here im sorry.
+
