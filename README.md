@@ -25,7 +25,7 @@ Features:
 ## Directory overview
 
 System's more or less complaint with Filesystem Hierarchy Standard 3.0:  
-[FHS_3.0](refspecs.linuxfoundation.org/FHS_3.0/index.html)  
+[FHS_3.0](http://refspecs.linuxfoundation.org/FHS_3.0/index.html)  
   
 btw:  
 **`system/` - SYSTEM/ IS GONE \*Crab Rave song playing\*.**  
