@@ -5,7 +5,7 @@ Jajko Command Shell
 
 #### TO-DO list
 
-1. Add something like user system also whatever.
+1. WAKA WAKA WAKA WAKA $ pacman remove red-ghost.
 
 #### Holes
 
@@ -24,30 +24,12 @@ Features:
 
 ## Directory overview
 
-`bin/` - executables.  
-`opt/` - static program files.
-`lib/` - libraries.
-`var/` - dynamic program files.
-`etc/` - configurations.
-`tmp/` - temporary files.
-`system/` - files required for system to start and work properly.  
-
-
-`system/shell/` - Core program's files.  
-
-`system/shell/client/` - Program used for input. Also imported by core. **Temporary location**.  
-`system/shell/main/` - Core modules.
-`system/shell/init.py` - Init script, ran first.  
-`system/etc/somewherehere/config.cfg` - Server config (IP etc.).
-
-
-`system/shell/main/libs/` - some modules.  
-`system/shell/main/server/` - Server module.  
-`system/shell/main/shellmanager/` - Shell manager's required modules.  
-`system/shell/main/config.py` - Config imported by other modules.  
-`system/shell/main/serverman.py` - Server manager module.  
-`system/shell/main/shellman.py` - Shell (manager) module.
-
+System's more or less complaint with FHS 3.0:  
+refspecs.linuxfoundation.org/FHS_3.0/index.html  
+  
+btw:  
+`system/` - SYSTEM/ IS GONE *Crab Rave song playing*.  
+  
 
 
 
